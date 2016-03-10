@@ -8,8 +8,129 @@
 
     <title><?php document_title(); ?></title>
     <?php wp_head(); ?>
-</head>
+    <style>
+        /*------------preloader---------*/
+        .preloader {
+            opacity: 1;
+            visibility: visible;
+            z-index: 10;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0, .95);
+            -webkit-transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+            transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+        }
+        .preloader.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .preloader__wrap {
+            position:absolute;
+            width:400px;
+            height:36px;
+            left:50%;
+            top:50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            overflow:visible;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+            cursor:default;
+        }
+        .preloader__wrap div {
+            position:absolute;
+            width:20px;
+            height:36px;
+            opacity:0;
+            font-family: "Proxima Nova Regular", sans-serif;
+            animation:move 2s linear infinite;
+            -webkit-animation:move 2s linear infinite;
+            transform:rotate(180deg);
+            -webkit-transform:rotate(180deg);
+            color:#fff;
+        }
+        .preloader__wrap div:nth-child(2) {
+            animation-delay:0.2s;
+            -webkit-animation-delay:0.2s;
+        }
+        .preloader__wrap div:nth-child(3) {
+            animation-delay:0.4s;
+            -webkit-animation-delay:0.4s;
+        }
+        .preloader__wrap div:nth-child(4) {
+            animation-delay:0.6s;
+            -webkit-animation-delay:0.6s;
+        }
+        .preloader__wrap div:nth-child(5) {
+            animation-delay:0.8s;
+            -webkit-animation-delay:0.8s;
+        }
+        .preloader__wrap div:nth-child(6) {
+            animation-delay:1s;
+            -webkit-animation-delay:1s;
+        }
+        .preloader__wrap div:nth-child(7) {
+            animation-delay:1.2s;
+            -webkit-animation-delay:1.2s;
+        }
 
+        @keyframes move {
+            0% {
+                left:0;
+                opacity:0;
+            }
+            35% {
+                left: 41%;
+                transform:rotate(0deg);
+                opacity:1;
+            }
+            65% {
+                left:59%;
+                transform:rotate(0deg);
+                opacity:1;
+            }
+            100% {
+                left:100%;
+                transform:rotate(-180deg);
+                opacity:0;
+            }
+        }
+        @-webkit-keyframes move {
+            0% {
+                left:0;
+                opacity:0;
+            }
+            35% {
+                left:41%;
+                -webkit-transform:rotate(0deg);
+                opacity:1;
+            }
+            65% {
+                left:59%;
+                -webkit-transform:rotate(0deg);
+                opacity:1;
+            }
+            100% {
+                left:100%;
+                -webkit-transform:rotate(-180deg);
+                opacity:0;
+            }
+        }
+        /*------------/preloader---------*/
+
+        @media (min-width: 768px) {
+
+        }
+
+    </style>
+    <link rel="stylesheet" href="<?php echo TEMPLATEURI ?>/css/swiper.min.css"/>
+    <link rel="stylesheet" href="<?php echo TEMPLATEURI ?>/css/main.css"/>
+</head>
 <body>
 <?php
 if ( is_404()) {
@@ -36,6 +157,8 @@ if ( is_404()) {
     </div>
     <!--/preloader-->
 
+
+
     <!-- site__header -->
     <header class="site__header">
 
@@ -43,11 +166,11 @@ if ( is_404()) {
         <div class="site__header-layout">
 
             <?php if(is_front_page()){?>
-            <!-- logo -->
-            <h1 class="logo">
-                <img src="<?php echo TEMPLATEURI ?>/img/logo-small.png" alt="logo">
-            </h1>
-            <!-- /logo -->
+                <!-- logo -->
+                <h1 class="logo">
+                    <img src="<?php echo TEMPLATEURI ?>/img/logo-small.png" alt="logo">
+                </h1>
+                <!-- /logo -->
             <?php }else{?>
                 <!-- logo -->
                 <a class="logo">
@@ -75,35 +198,41 @@ if ( is_404()) {
         <div class="drop-menu">
 
             <!-- drop-menu__inner -->
-            <div class="drop-menu__inner">
+            <div class="drop-menu__inner" id="">
 
                 <!-- drop-menu__inner-wrap -->
-                <div class="drop-menu__inner-wrap">
+                <div class="drop-menu__inner-wrap"  id="scroll-wrap" >
 
-                    <!-- drop-menu__menu -->
-                    <ul class="drop-menu__menu">
-                        <li><a href="#" class="drop-menu__menu-item">View icons</a></li>
-                        <li><a href="#" class="drop-menu__menu-item">Pricing</a></li>
-                    </ul>
-                    <!-- /drop-menu__menu -->
+                    <!-- scroller -->
+                    <div  id="scroller">
 
-                    <!-- drop-menu__navigation -->
-                    <ul class="drop-menu__navigation">
-                        <li><a href="#" class="drop-menu__navigation-item">About</a></li>
-                        <li><a href="#" class="drop-menu__navigation-item">Blog</a></li>
-                        <li><a href="#" class="drop-menu__navigation-item">Affilates</a></li>
-                        <li><a href="#" class="drop-menu__navigation-item">Support</a></li>
-                    </ul>
-                    <!-- /drop-menu__navigation -->
+                        <!-- drop-menu__menu -->
+                        <ul class="drop-menu__menu">
+                            <li><a href="#" class="drop-menu__menu-item">View icons</a></li>
+                            <li><a href="#" class="drop-menu__menu-item">Pricing</a></li>
+                        </ul>
+                        <!-- /drop-menu__menu -->
 
-                    <!-- drop-menu__legally -->
-                    <ul class="drop-menu__legally">
-                        <li><a href="#" class="drop-menu__legally-item">Classic license</a></li>
-                        <li><a href="#" class="drop-menu__legally-item">Extended license</a></li>
-                        <li><a href="#" class="drop-menu__legally-item">Terms of use</a></li>
-                        <li><a href="#" class="drop-menu__legally-item">Privicy policy</a></li>
-                    </ul>
-                    <!-- /drop-menu__legally -->
+                        <!-- drop-menu__navigation -->
+                        <ul class="drop-menu__navigation">
+                            <li><a href="#" class="drop-menu__navigation-item">About</a></li>
+                            <li><a href="#" class="drop-menu__navigation-item">Blog</a></li>
+                            <li><a href="#" class="drop-menu__navigation-item">Affilates</a></li>
+                            <li><a href="#" class="drop-menu__navigation-item">Support</a></li>
+                        </ul>
+                        <!-- /drop-menu__navigation -->
+
+                        <!-- drop-menu__legally -->
+                        <ul class="drop-menu__legally">
+                            <li><a href="#" class="drop-menu__legally-item">Classic license</a></li>
+                            <li><a href="#" class="drop-menu__legally-item">Extended license</a></li>
+                            <li><a href="#" class="drop-menu__legally-item">Terms of use</a></li>
+                            <li><a href="#" class="drop-menu__legally-item">Privicy policy</a></li>
+                        </ul>
+                        <!-- /drop-menu__legally -->
+
+                    </div>
+                    <!-- /scroller -->
 
                 </div>
                 <!-- /drop-menu__inner-wrap -->
