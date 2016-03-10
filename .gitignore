@@ -6,7 +6,7 @@
 ## Directory-based project format:
 .idea/
 /wp-config.php
-/wp-content/wp_gulp
+/wp-content/wp_gulp/
 # if you remove the above rule, at least ignore the following:
 
 # User-specific stuff:
