@@ -1,4 +1,7 @@
 <?php
+
+global $post;
+
 function posts_link_next_class($format)
 {
     $format = str_replace('href=', 'class="pagination__next" href=', $format);
