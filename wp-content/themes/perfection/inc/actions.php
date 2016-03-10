@@ -23,7 +23,6 @@ function theme_setup()
 {
     add_theme_support('menus');
 	add_image_size( '96x97', 96, 97, true );
-
     add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size( 300, 212, true );
     add_image_size( 'blog-width', 300, 212, true );

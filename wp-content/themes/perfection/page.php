@@ -1,6 +1,8 @@
 <?php
 
-get_header(); ?>
+get_header();
+
+?>
 <!-- site__content -->
 <div class="site__content">
 

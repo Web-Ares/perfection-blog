@@ -1,4 +1,4 @@
-<?php get_header('article'); ?>
+<?php get_header(); ?>
 
     <!-- site__content -->
     <div class="site__content">
