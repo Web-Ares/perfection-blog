@@ -7,6 +7,7 @@
 .idea/
 /wp-config.php
 /wp-content/wp_gulp/
+/wp-content/themes/wp_gulp/
 # if you remove the above rule, at least ignore the following:
 
 # User-specific stuff:
