@@ -18,118 +18,125 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background: rgba(0,0,0, .95);
+            background: rgba(0, 0, 0, .95);
             -webkit-transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
             transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
         }
+
         .preloader.hide {
             opacity: 0;
             visibility: hidden;
         }
+
         .preloader__wrap {
-            position:absolute;
-            width:400px;
-            height:36px;
-            left:50%;
-            top:50%;
+            position: absolute;
+            width: 400px;
+            height: 36px;
+            left: 50%;
+            top: 50%;
             -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-            overflow:visible;
-            -webkit-user-select:none;
-            -moz-user-select:none;
-            -ms-user-select:none;
-            user-select:none;
-            cursor:default;
+            overflow: visible;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: default;
         }
+
         .preloader__wrap div {
-            position:absolute;
-            width:20px;
-            height:36px;
-            opacity:0;
+            position: absolute;
+            width: 20px;
+            height: 36px;
+            opacity: 0;
             font-family: "Proxima Nova Regular", sans-serif;
-            animation:move 2s linear infinite;
-            -webkit-animation:move 2s linear infinite;
-            transform:rotate(180deg);
-            -webkit-transform:rotate(180deg);
-            color:#fff;
+            animation: move 2s linear infinite;
+            -webkit-animation: move 2s linear infinite;
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            color: #fff;
         }
+
         .preloader__wrap div:nth-child(2) {
-            animation-delay:0.2s;
-            -webkit-animation-delay:0.2s;
+            animation-delay: 0.2s;
+            -webkit-animation-delay: 0.2s;
         }
+
         .preloader__wrap div:nth-child(3) {
-            animation-delay:0.4s;
-            -webkit-animation-delay:0.4s;
+            animation-delay: 0.4s;
+            -webkit-animation-delay: 0.4s;
         }
+
         .preloader__wrap div:nth-child(4) {
-            animation-delay:0.6s;
-            -webkit-animation-delay:0.6s;
+            animation-delay: 0.6s;
+            -webkit-animation-delay: 0.6s;
         }
+
         .preloader__wrap div:nth-child(5) {
-            animation-delay:0.8s;
-            -webkit-animation-delay:0.8s;
+            animation-delay: 0.8s;
+            -webkit-animation-delay: 0.8s;
         }
+
         .preloader__wrap div:nth-child(6) {
-            animation-delay:1s;
-            -webkit-animation-delay:1s;
+            animation-delay: 1s;
+            -webkit-animation-delay: 1s;
         }
+
         .preloader__wrap div:nth-child(7) {
-            animation-delay:1.2s;
-            -webkit-animation-delay:1.2s;
+            animation-delay: 1.2s;
+            -webkit-animation-delay: 1.2s;
         }
 
         @keyframes move {
             0% {
-                left:0;
-                opacity:0;
+                left: 0;
+                opacity: 0;
             }
             35% {
                 left: 41%;
-                transform:rotate(0deg);
-                opacity:1;
+                transform: rotate(0deg);
+                opacity: 1;
             }
             65% {
-                left:59%;
-                transform:rotate(0deg);
-                opacity:1;
+                left: 59%;
+                transform: rotate(0deg);
+                opacity: 1;
             }
             100% {
-                left:100%;
-                transform:rotate(-180deg);
-                opacity:0;
+                left: 100%;
+                transform: rotate(-180deg);
+                opacity: 0;
             }
         }
+
         @-webkit-keyframes move {
             0% {
-                left:0;
-                opacity:0;
+                left: 0;
+                opacity: 0;
             }
             35% {
-                left:41%;
-                -webkit-transform:rotate(0deg);
-                opacity:1;
+                left: 41%;
+                -webkit-transform: rotate(0deg);
+                opacity: 1;
             }
             65% {
-                left:59%;
-                -webkit-transform:rotate(0deg);
-                opacity:1;
+                left: 59%;
+                -webkit-transform: rotate(0deg);
+                opacity: 1;
             }
             100% {
-                left:100%;
-                -webkit-transform:rotate(-180deg);
-                opacity:0;
+                left: 100%;
+                -webkit-transform: rotate(-180deg);
+                opacity: 0;
             }
         }
+
         /*------------/preloader---------*/
 
 
     </style>
 </head>
 <body>
-<?php
-if ( is_404()) {
-    the_post();
-} ?>
 <!-- site -->
 <div class="site">
 
@@ -151,27 +158,17 @@ if ( is_404()) {
     </div>
     <!--/preloader-->
 
-
-
     <!-- site__header -->
     <header class="site__header">
 
         <!-- site__header-layout -->
         <div class="site__header-layout">
 
-            <?php if(is_front_page()){?>
-                <!-- logo -->
-                <h1 class="logo">
-                    <img src="<?php echo TEMPLATEURI ?>/img/logo-small.png" alt="logo">
-                </h1>
-                <!-- /logo -->
-            <?php }else{?>
-                <!-- logo -->
-                <a class="logo">
-                    <img src="<?php echo TEMPLATEURI ?>/img/logo-small.png" alt="logo">
-                </a>
-                <!-- /logo -->
-            <?php }?>
+            <!-- logo -->
+            <a href="<?php home_url(); ?>" class="logo">
+                <img src="<?php echo TEMPLATEURI ?>/img/logo_inside.png" alt="logo">
+            </a>
+            <!-- /logo -->
 
             <!-- header-menu__item -->
             <a href="#" class="header-menu__item">View Icons</a>
@@ -192,13 +189,13 @@ if ( is_404()) {
         <div class="drop-menu">
 
             <!-- drop-menu__inner -->
-            <div class="drop-menu__inner" id="">
+            <div class="drop-menu__inner">
 
                 <!-- drop-menu__inner-wrap -->
-                <div class="drop-menu__inner-wrap"  id="scroll-wrap" >
+                <div class="drop-menu__inner-wrap" id="scroll-wrap">
 
                     <!-- scroller -->
-                    <div  id="scroller">
+                    <div id="scroller">
 
                         <!-- drop-menu__menu -->
                         <ul class="drop-menu__menu">

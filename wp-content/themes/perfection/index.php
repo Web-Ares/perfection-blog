@@ -1,74 +1,74 @@
 <?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme and one of the
- * two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * For example, it puts together the home page when no home.php file exists.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
- */
 
-get_header(); ?>
+get_header('blog'); ?>
+<!-- promo -->
+<div class="promo">
 
-<div class="site__content">
+    <!-- promo__wrap -->
+    <div class="promo__wrap">
 
-    <!-- site__content__caption -->
-    <div class="site__content__caption site__content__caption_blog">
-        <div>
-            <div>
-                <h1>
-                    <?php echo get_field('title_for_blog', 'options');?>
-                    <span class="site__sub-title"><?php echo get_field('subtitle_for_blog', 'options');?></span>
-                </h1>
+        <!-- site__centered -->
+        <div class="site__centered">
+
+            <!-- promo__content -->
+            <div class="promo__content">
+
+                <!-- promo__topic -->
+                <h1 class="promo__topic"><?php single_post_title(); ?></h1>
+                <!-- /promo__topic -->
+
+                <p>Words of wisdom</p>
+
             </div>
+            <!-- /promo__content -->
+
         </div>
+        <!-- /site__centered -->
+
     </div>
-    <!-- /site__content__caption -->
-    <!-- content -->
-    <div class="content">
+    <!-- /promo__wrap -->
+
+</div>
+<!-- /promo -->
+
+
+<!-- site__content -->
+<section class="site__inner-page">
+
+    <!-- site__centered -->
+    <div class="site__centered">
 
         <!-- blog-home -->
         <div class="blog-home">
 
-            <!-- container-fluid -->
-            <div class="container-fluid">
-                <div class="row">
+            <!-- blog-home__list -->
+            <ul class="blog-home__list">
 
-                    <!-- blog-home__list -->
-                    <ul class="blog-home__list">
+                <?php if (have_posts()) : ?>
 
-                        <?php if (have_posts()) : ?>
+                    <?php /* The loop */ ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                        <?php get_template_part('content', 'list'); ?>
+                    <?php endwhile; ?>
 
-                            <?php /* The loop */ ?>
-                            <?php while (have_posts()) : the_post(); ?>
-                                <?php get_template_part('content', 'list'); ?>
-                            <?php endwhile; ?>
 
-                            <?php echo adoric_paging_nav(); ?>
-
-                        <?php else : ?>
-                            <?php get_template_part('content', 'none'); ?>
-                        <?php endif; ?>
-
-                    </ul>
-                    <!-- /blog-home__list -->
-
-                </div>
-            </div>
-            <!-- /container-fluid -->
+                <?php else : ?>
+                    <?php get_template_part('content', 'none'); ?>
+                <?php endif; ?>
+            </ul>
+            <!-- /blog-home__list -->
+            <?php echo adoric_paging_nav(); ?>
 
         </div>
         <!-- /blog-home -->
 
     </div>
-    <!-- /content -->
+    <!-- site__centered -->
 
-</div><!-- /site__content -->
+</section>
+<!-- /site__content -->
+
+</div>
+<!-- /site -->
 
 <?php get_footer(); ?>

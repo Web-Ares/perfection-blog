@@ -49,7 +49,11 @@ if (!function_exists('adoric_paging_nav')) :
             <?php if (get_previous_posts_link()) : ?>
                 <?php previous_posts_link('newer posts'); ?>
             <?php endif; ?>
-
+            <div class="pagination__social">
+                <a href="#" class="pagination__social-item pagination__social-item_fb"></a>
+                <a href="#" class="pagination__social-item pagination__social-item_tw"></a>
+                <a href="#" class="pagination__social-item pagination__social-item_gg"></a>
+            </div>
             <?php if (get_next_posts_link()) : ?>
                 <?php
                 next_posts_link('Older posts');
