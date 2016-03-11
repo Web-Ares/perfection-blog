@@ -8,6 +8,7 @@
     <title><?php document_title(); ?></title>
     <?php wp_head(); ?>
     <style>
+
         /*------------preloader---------*/
         .preloader {
             opacity: 1;
@@ -18,121 +19,133 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background: rgba(0, 0, 0, .95);
+            background: rgba(0,0,0, 1);
             -webkit-transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
             transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
         }
-
         .preloader.hide {
             opacity: 0;
             visibility: hidden;
         }
-
         .preloader__wrap {
-            position: absolute;
-            width: 400px;
-            height: 36px;
-            left: 50%;
-            top: 50%;
+            position:absolute;
+            width:350px;
+            height:70px;
+            left:50%;
+            top:50%;
             -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-            overflow: visible;
+            overflow:hidden;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
             cursor: default;
         }
-
         .preloader__wrap div {
             position: absolute;
-            width: 20px;
-            height: 36px;
+            width: 30px;
+            height: 46px;
             opacity: 0;
-            font-family: "Proxima Nova Regular", sans-serif;
-            animation: move 2s linear infinite;
-            -webkit-animation: move 2s linear infinite;
-            transform: rotate(180deg);
-            -webkit-transform: rotate(180deg);
+            font-family: "Nexa Regular", sans-serif;
+            font-size: 26px;
             color: #fff;
+            -webkit-animation: move 2.5s linear infinite;
+            animation: move 2.5s linear infinite;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+            -webkit-animation-delay: -1.8s;
+            animation-delay: -1.8s;
         }
-
         .preloader__wrap div:nth-child(2) {
-            animation-delay: 0.2s;
-            -webkit-animation-delay: 0.2s;
+            -webkit-animation-delay: -1.5s;
+            animation-delay: -1.5s;
         }
-
         .preloader__wrap div:nth-child(3) {
-            animation-delay: 0.4s;
-            -webkit-animation-delay: 0.4s;
+            -webkit-animation-delay: -1.2s;
+            animation-delay: -1.2s;
         }
-
         .preloader__wrap div:nth-child(4) {
-            animation-delay: 0.6s;
-            -webkit-animation-delay: 0.6s;
+            -webkit-animation-delay: -0.9s;
+            animation-delay: -0.9s;
         }
-
         .preloader__wrap div:nth-child(5) {
-            animation-delay: 0.8s;
-            -webkit-animation-delay: 0.8s;
+            -webkit-animation-delay: -0.6s;
+            animation-delay: -0.6s;
         }
-
         .preloader__wrap div:nth-child(6) {
-            animation-delay: 1s;
-            -webkit-animation-delay: 1s;
+            -webkit-animation-delay: -0.3s;
+            animation-delay: -0.3s;
         }
-
         .preloader__wrap div:nth-child(7) {
-            animation-delay: 1.2s;
-            -webkit-animation-delay: 1.2s;
-        }
-
-        @keyframes move {
-            0% {
-                left: 0;
-                opacity: 0;
-            }
-            35% {
-                left: 41%;
-                transform: rotate(0deg);
-                opacity: 1;
-            }
-            65% {
-                left: 59%;
-                transform: rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                left: 100%;
-                transform: rotate(-180deg);
-                opacity: 0;
-            }
+            -webkit-animation-delay:0s;
+            animation-delay:0s;
         }
 
         @-webkit-keyframes move {
             0% {
-                left: 0;
-                opacity: 0;
+                left:0;
+                opacity:0;
             }
-            35% {
-                left: 41%;
-                -webkit-transform: rotate(0deg);
-                opacity: 1;
+            30% {
+                left:41%;
+                -webkit-transform:rotate(0deg);
+                opacity:1;
             }
             65% {
-                left: 59%;
-                -webkit-transform: rotate(0deg);
-                opacity: 1;
+                left:59%;
+                -webkit-transform:rotate(0deg);
+                opacity:1;
+            }
+            90% {
+                left:100%;
+                transform:rotate(-180deg);
+                opacity:0;
             }
             100% {
-                left: 100%;
-                -webkit-transform: rotate(-180deg);
-                opacity: 0;
+                left:100%;
+                transform:rotate(-180deg);
+                opacity:0;
             }
         }
-
+        @keyframes move {
+            0% {
+                left:0;
+                opacity:0;
+            }
+            30% {
+                left: 41%;
+                transform:rotate(0deg);
+                opacity:1;
+            }
+            65% {
+                left:59%;
+                transform:rotate(0deg);
+                opacity:1;
+            }
+            90% {
+                left:100%;
+                transform:rotate(-180deg);
+                opacity:0;
+            }
+            100% {
+                left:100%;
+                transform:rotate(-180deg);
+                opacity:0;
+            }
+        }
         /*------------/preloader---------*/
 
+        @media (min-width: 992px) {
+
+            /*---------preloader--------*/
+            .preloader__wrap {
+                width:400px;
+                overflow: visible;
+            }
+            /*---------/preloader--------*/
+
+        }
 
     </style>
 </head>
@@ -141,7 +154,7 @@
 <div class="site">
 
     <!--preloader-->
-    <div class="preloader" data-delay="2000">
+    <div class="preloader">
 
         <!--preloader__wrap-->
         <div class="preloader__wrap">
@@ -165,7 +178,7 @@
         <div class="site__header-layout">
 
             <!-- logo -->
-            <a href="<?php home_url(); ?>" class="logo">
+            <a href="<?php echo home_url(); ?>" class="logo">
                 <img src="<?php echo TEMPLATEURI ?>/img/logo_inside.png" alt="logo">
             </a>
             <!-- /logo -->

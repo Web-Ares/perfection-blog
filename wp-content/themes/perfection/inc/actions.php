@@ -83,6 +83,12 @@ function add_js_css()
             wp_enqueue_style('blog_home-css');
         }else if(is_page_template('page-templates/page-icons.php')){
 
+        }else if(is_page_template('page-templates/page-legacy.php')){
+            wp_enqueue_style('site_main');
+            wp_enqueue_style('legal-css');
+        }else if(is_page_template('page-templates/page-pricing.php')){
+            wp_enqueue_style('site_main');
+            wp_enqueue_style('pricing-css');
         }else{
             wp_enqueue_style('site_main');
         }
