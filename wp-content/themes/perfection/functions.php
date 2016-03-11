@@ -10,7 +10,7 @@ define( 'COUNT_CATEGORIES', get_field('count_categories', 'options') );
 $blog_info = get_bloginfo('template_url');
 define('BLOGINFO', $blog_info);
 
-//show_admin_bar( false );
+show_admin_bar( false );
 // Load library files.
 require_once( TEMPLATEINC . '/shortcodes.php' );
 require_once( TEMPLATEINC . '/cpt.php' );
