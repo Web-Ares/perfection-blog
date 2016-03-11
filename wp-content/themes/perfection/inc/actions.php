@@ -89,6 +89,9 @@ function add_js_css()
         }else if(is_page_template('page-templates/page-pricing.php')){
             wp_enqueue_style('site_main');
             wp_enqueue_style('pricing-css');
+        }else if(is_page_template('page-templates/page-download.php')){
+            wp_enqueue_style('site_main');
+            wp_enqueue_style('download-css');
         }else{
             wp_enqueue_style('site_main');
         }

@@ -150,6 +150,9 @@
     </style>
 </head>
 <body>
+<?php if ( is_page() || is_single() || is_singular() || is_404() ) {
+    the_post();
+} ?>
 <!-- site -->
 <div class="site">
 
@@ -183,13 +186,7 @@
             </a>
             <!-- /logo -->
 
-            <!-- header-menu__item -->
-            <a href="#" class="header-menu__item">View Icons</a>
-            <!-- /header-menu__item -->
-
-            <!-- header-menu__item -->
-            <a href="#" class="header-menu__item">Buy Now</a>
-            <!-- /header-menu__item -->
+            <?php echo get_visible_menu($post->ID);?>
 
             <!-- site__header__menu-drop -->
             <a class="drop-menu-btn" href="#"><span></span></a>

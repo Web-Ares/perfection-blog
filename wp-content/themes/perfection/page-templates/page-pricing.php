@@ -4,8 +4,7 @@
  */
 ?>
 
-<?php get_header('second');
-the_post(); ?>
+<?php get_header('second');?>
 
     <!-- promo -->
     <div data-header-color="black" class="promo promo_inner">
