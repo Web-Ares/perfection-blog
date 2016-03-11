@@ -3,7 +3,6 @@
  * Template Name: Home Page
  */
 ?>
-
 <?php get_header(); ?>
 
     <div class="site__content">

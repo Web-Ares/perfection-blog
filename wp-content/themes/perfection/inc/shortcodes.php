@@ -52,7 +52,8 @@ if (!function_exists('adoric_paging_nav')) :
             <div class="pagination__social">
                 <a href="#" class="pagination__social-item pagination__social-item_fb">
 
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         x="0px" y="0px"
                          viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                             <path style="fill:#d9d9d9;" d="M296.296,512H200.36V256h-64v-88.225l64-0.029l-0.104-51.976C200.256,43.794,219.773,0,304.556,0h70.588v88.242h-44.115
                                     c-33.016,0-34.604,12.328-34.604,35.342l-0.131,44.162h79.346l-9.354,88.225L296.36,256L296.296,512z"/>
@@ -61,7 +62,8 @@ if (!function_exists('adoric_paging_nav')) :
                 </a>
                 <a href="#" class="pagination__social-item pagination__social-item_tw">
 
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         x="0px" y="0px"
                          viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;"
                          xml:space="preserve">
 	                            <path style="fill:#d9d9d9;" d="M512.002,97.211c-18.84,8.354-39.082,14.001-60.33,16.54c21.686-13,38.342-33.585,46.186-58.115
@@ -77,8 +79,10 @@ if (!function_exists('adoric_paging_nav')) :
                 </a>
                 <a href="#" class="pagination__social-item pagination__social-item_gg">
 
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         viewBox="0 0 508.52 508.52" style="enable-background:new 0 0 508.52 508.52;" xml:space="preserve">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         x="0px" y="0px"
+                         viewBox="0 0 508.52 508.52" style="enable-background:new 0 0 508.52 508.52;"
+                         xml:space="preserve">
                                 <path style="fill:#d9d9d9;" d="M277.588,39.442H144.547c-59.624,0-115.752,45.195-115.752,97.54
                                     c0,53.49,40.65,96.682,101.354,96.682l12.332-0.381c-3.941,7.532-6.77,16.018-6.77,24.854c0,14.874,8.009,26.92,18.116,36.741
                                     l-23.074,0.254C56.859,295.1,0,342.202,0,390.956c0,48.087,62.357,78.121,136.22,78.121c84.224,0,130.753-47.801,130.753-95.856
@@ -105,82 +109,6 @@ if (!function_exists('adoric_paging_nav')) :
     }
 endif;
 
-
-function my_social_icons($atts, $content)
-{
-    extract(shortcode_atts(array(
-        "facebook" => '',
-        "twitter" => '',
-        "linkedin" => '',
-        "google_plus" => '',
-    ), $atts));
-    if (!empty($facebook)) {
-
-        $facebook_icon = '<a href="#">
-            <div><i class="fa fa-facebook"></i></div>
-        </a>';
-
-    } else {
-        $facebook_icon = '';
-    }
-
-    if (!empty($twitter)) {
-
-        $twitter_icon = '<a href="#">
-            <div><i class="fa fa-twitter"></i></div>
-        </a>';
-
-    } else {
-        $twitter_icon = '';
-    }
-    if (!empty($linkedin)) {
-
-        $linkedin_icon = '<a href="#">
-            <div><i class="fa fa-linkedin"></i></div>
-        </a>';
-
-    } else {
-        $linkedin_icon = '';
-    }
-    if (!empty($google_plus)) {
-
-        $google_plus_icon = '<a href="#">
-            <div><i class="fa fa-google-plus"></i></div>
-        </a>';
-
-    } else {
-        $google_plus_icon = '';
-    }
-    return '
-                             <div class="blog-article__pic">
-                                   ' . $content . '
-                                <a href="#" class="blog-article__btn">
-                                    <span class="blog-article__btn-open"></span>
-                                </a>
-
-                                <div class="blog-article__tooltip-wrap">
-                                    <div class="blog-article__tooltip">
-                                        <span class="blog-article__tooltip-title">Share the knowledge!!!</span>
-
-                                        <!-- social-network -->
-                                        <div class="social-network">
-                                            ' . $facebook_icon . '
-                                            ' . $twitter_icon . '
-                                            ' . $linkedin_icon . '
-                                            ' . $google_plus_icon . '
-                                        </div>
-                                        <!-- /social-network -->
-
-                                        <span class="blog-article__tooltip-title">Site owner?</span>
-                                        <p>Increase your site’s
-                                            conversions with adoric</p>
-                                        <a href="#" class="blog-article__tooltip-link">get a demo</a>
-                                    </div>
-                                </div>
-                            </div>';
-}
-
-add_shortcode('my_social_shortcode', 'my_social_icons');
 
 if (!function_exists('adoric_post_nav')) :
 
@@ -216,32 +144,7 @@ function getAuthor($post_id)
     return $author;
 }
 
-function share_knowledge()
-{
-    $get_demo_link = get_field('get_a_demo_link', 'options');
-    $site_owner = get_field('site_owner', 'options');
-    $share_the_knowledge = get_field('share_the_knowledge', 'options');
-    return '<a href="#" class="blog-article__btn">
-                                    <span class="blog-article__btn-open"></span>
-                                </a>
-                                <div class="blog-article__tooltip-wrap">
-                                    <div class="blog-article__tooltip">
-                                        <span class="blog-article__tooltip-title">' . $share_the_knowledge . '</span>
 
-                                        <!-- social-network -->
-                                        <div class="social-network share42init" id="share42">
-
-                                        </div>
-                                        <!-- /social-network -->
-
-                                        <span class="blog-article__tooltip-title">Site owner?</span>
-                                        <p>' . $site_owner . '</p>
-                                        <a href="' . $get_demo_link . '" class="blog-article__tooltip-link">get a demo</a>
-                                    </div>
-                                </div>';
-}
-
-add_shortcode('share_knowledge', 'share_knowledge');
 function social_links()
 {
     return ' <dl>
@@ -263,91 +166,6 @@ function social_links()
 
 add_shortcode('social_links', 'social_links');
 
-function get_menu($attr)
-{
-    $menu_name = $attr['menu_name'];
-    $menu_items = wp_get_nav_menu_items($menu_name, array(
-        'orderby' => 'menu_order',
-        'post_type' => 'nav_menu_item',
-        'post_status' => 'publish',
-        'output' => ARRAY_A,
-        'output_key' => 'menu_order',
-        'update_post_term_cache' => false));
-
-    $menu_list = '';
-    foreach ((array)$menu_items as $key => $menu_item) {
-
-        if ($post->ID == $menu_item->object_id) {
-            $class = "class='active'";
-        } else {
-            $class = "";
-        }
-
-
-        $title = $menu_item->title;
-        $url = $menu_item->url;
-
-        $menu_list .= '<dd ' . $class . '><a href="' . $url . '">' . $title . '</a></dd>';
-
-    }
-    return $menu_list;
-}
-
-add_shortcode('get_menu', 'get_menu');
-
-function get_main_menu()
-{
-    $menu_name = 'main_menu';
-    $menu_items = wp_get_nav_menu_items($menu_name, array(
-        'orderby' => 'menu_order',
-        'post_type' => 'nav_menu_item',
-        'post_status' => 'publish',
-        'output' => ARRAY_A,
-        'output_key' => 'menu_order',
-        'update_post_term_cache' => false));
-
-    $menu_list = '<ul>';
-    foreach ((array)$menu_items as $key => $menu_item) {
-
-        if ($post->ID == $menu_item->object_id) {
-            $class = "class='active'";
-        } else {
-            $class = "";
-        }
-
-
-        $title = $menu_item->title;
-        $url = $menu_item->url;
-
-        $menu_list .= '<li ' . $class . '><a href="' . $url . '">' . $title . '</a></li>';
-
-    }
-    return $menu_list . '</ul>';
-}
-
-function get_top_menu()
-{
-    $menu_name = 'top_menu';
-    $menu_items = wp_get_nav_menu_items($menu_name, array(
-        'orderby' => 'menu_order',
-        'post_type' => 'nav_menu_item',
-        'post_status' => 'publish',
-        'output' => ARRAY_A,
-        'output_key' => 'menu_order',
-        'update_post_term_cache' => false));
-
-    $menu_list = '';
-    foreach ((array)$menu_items as $key => $menu_item) {
-
-
-        $title = $menu_item->title;
-        $url = $menu_item->url;
-
-        $menu_list .= '<a href="' . $url . '">' . $title . '</a>';
-
-    }
-    return $menu_list;
-}
 
 function count_icons()
 {
@@ -401,4 +219,57 @@ function get_visible_menu($post_id)
 
     }
     return $menu_list;
+}
+
+function similar_posts($post_id = false)
+{
+
+    $args = array(
+        'posts_per_page' => 3,
+        'post_type' => 'post',
+        'post_status' => 'publish',
+        'post__not_in' => array($post_id),
+    );
+    $q = new WP_Query($args);
+
+    $post_list = '  <!-- similar-records -->
+            <section class="similar-records">
+
+                <!-- similar-records__title -->
+                <h2 class="similar-records__title">You might also like ...</h2>
+                <!-- /similar-records__title -->';
+
+    while ($q->have_posts()) :
+        $q->the_post();
+        $serv_title = get_the_title();
+        $link = get_the_permalink();
+        if (has_post_thumbnail() && !post_password_required() && !is_attachment()) {
+            $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'blog-width');
+        } else {
+            $img = '';
+        }
+        $post_list .= '<!-- similar-records__item -->
+                <article class="similar-records__item">
+
+                    <a href="' . $link . '">
+                        <img src="' . $img[0] . '" alt="' . $serv_title . '">
+
+                        <!-- similar-records__item -->
+                        <h3 class="similar-records__topic">
+                            <span>' . $serv_title . '</span>
+                        </h3>
+                        <!-- /similar-records__item -->
+
+                    </a>
+
+                </article>
+                <!-- /similar-records__item -->';
+
+    endwhile;
+    $post_list .= '</section>
+            <!-- /similar-records -->';
+
+    wp_reset_query();
+    return $post_list;
+
 }

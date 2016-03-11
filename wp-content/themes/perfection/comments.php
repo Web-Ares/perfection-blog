@@ -1,22 +1,21 @@
 <?php
-/**
- * The template for displaying Comments
- *
- * The area of the page that contains comments and the comment form.
- *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
- */
 
 /*
  * If the current post is protected by a password and the visitor has not yet
  * entered the password we will return early without loading the comments.
  */ ?>
-<div class="blog-article__comments">
-    <h2>Comments</h2>
+<!-- comments -->
+<section class="comments">
 
-    <div class="blog-article__comments-wrap">
+    <!-- comments__title -->
+    <h2 class="comments__title">Comments</h2>
+    <!-- /comments__title -->
+
+    <!-- comments__frame -->
+    <div class="comments__frame">
         <?php echo do_shortcode('[fbcomments]'); ?>
     </div>
-</div>
+    <!-- /comments__frame -->
+
+</section>
+<!-- /comments -->

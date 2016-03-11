@@ -151,7 +151,7 @@
 </head>
 <body>
 <?php if ( is_page() || is_single() || is_singular() || is_404() ) {
-    the_post();
+//    the_post();
 } ?>
 <!-- site -->
 <div class="site">

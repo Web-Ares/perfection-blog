@@ -63,12 +63,14 @@ function add_js_css()
 
     wp_register_style('blog_home-css', TEMPLATEURI . '/css/blog-home.css');
     wp_register_style('blog_main-css', TEMPLATEURI . '/css/main-blog.css');
+    wp_register_style('blog-article', TEMPLATEURI . '/css/blog-article.css');
 
     wp_register_style('legal-css', TEMPLATEURI . '/css/legal.css');
 
     wp_register_style('pricing-css', TEMPLATEURI . '/css/pricing-page.css');
 
     wp_register_style('download-css', TEMPLATEURI . '/css/free-download.css');
+
 
     wp_register_style('site_main', TEMPLATEURI . '/css/main.css');
 
@@ -78,7 +80,7 @@ function add_js_css()
         wp_enqueue_style('swiper-css');
         wp_enqueue_style('site_main');
     }else{
-        if (get_post_type()=='post') {
+        if (get_post_type()=='post' and !is_single()) {
             wp_enqueue_style('blog_main-css');
             wp_enqueue_style('blog_home-css');
         }else if(is_page_template('page-templates/page-icons.php')){
@@ -92,6 +94,9 @@ function add_js_css()
         }else if(is_page_template('page-templates/page-download.php')){
             wp_enqueue_style('site_main');
             wp_enqueue_style('download-css');
+        }else if (get_post_type()=='post' and is_single()) {
+            wp_enqueue_style('blog_main-css');
+            wp_enqueue_style('blog-article');
         }else{
             wp_enqueue_style('site_main');
         }
