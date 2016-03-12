@@ -42,7 +42,7 @@ $authors = getAuthor($author_id);
 
             <!-- author__ava -->
             <div class="author__ava">
-                <img src="<?php echo $authors['photo'] ?>" alt="ava"/>
+                <img src="<?php echo $authors['photo'] ?>" alt="photo"/>
             </div>
             <!-- /author__ava -->
 
