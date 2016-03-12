@@ -50,8 +50,8 @@ function add_js_css()
 
     wp_register_script('swiper', TEMPLATEURI.'/js/swiper.min.js', false, '2.1.3', true);
 
-    wp_register_script('share', TEMPLATEURI.'/js/share.js', false, '1', true);
-    wp_enqueue_script('share');
+//    wp_register_script('share', TEMPLATEURI.'/js/share.js', false, '1', true);
+//    wp_enqueue_script('share');
 
     wp_register_script('main', TEMPLATEURI.'/js/jquery.main.js', false, '1', true);
     wp_enqueue_script('main');
