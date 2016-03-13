@@ -80,11 +80,14 @@ function add_js_css()
         wp_enqueue_style('swiper-css');
         wp_enqueue_style('site_main');
     }else{
+
+
         if (get_post_type()=='post' and !is_single()) {
             wp_enqueue_style('blog_main-css');
             wp_enqueue_style('blog_home-css');
         }else if(is_page_template('page-templates/page-icons.php')){
-
+            wp_enqueue_style('site_main');
+            wp_enqueue_style('legal-css');
         }else if(is_page_template('page-templates/page-legacy.php')){
             wp_enqueue_style('site_main');
             wp_enqueue_style('legal-css');

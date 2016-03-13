@@ -240,9 +240,9 @@ function get_menus($post_id,$menu_name)
     foreach ((array)$menu_items as $key => $menu_item) {
 
         if ($post_id == $menu_item->object_id) {
-            $class = "class='active'";
+            $class = "class='active ".$menu_item->classes[0]."'";
         } else {
-            $class = "";
+            $class = "class = '".$menu_item->classes[0]."'";
         }
 
 
@@ -306,4 +306,46 @@ function similar_posts($post_id = false)
     wp_reset_query();
     return $post_list;
 
+}
+
+function getIconsControl($post_id){
+    $get_icons = get_field('which_show_types_icons',$post_id);
+        if($get_icons==1){
+            echo '<div class="active">
+                        <a class="tabs__links" href="#">Line version</a>
+                    </div>
+                    <div>
+                        <a class="tabs__links" href="#">Solid version</a>
+                    </div>';
+        }else{
+            echo '<div>
+                        <a class="tabs__links" href="#">Line version</a>
+                    </div>
+                    <div class="active">
+                        <a class="tabs__links" href="#">Solid version</a>
+                    </div>';
+        }
+
+
+}
+
+function get_all_categories()
+{
+
+    $args = array(
+        'posts_per_page' => -1,
+        'post_type' => 'icons',
+        'post_status' => 'publish'
+    );
+    $q = new WP_Query($args);
+    $solid_list = '';
+    $inline_list = '';
+    while ($q->have_posts()) {
+        $q->the_post();
+        $icons_title = get_the_title();
+        $solid_list .= '<div>'.$icons_title.' <img src="'.get_field('solid_icons_image',get_the_ID()).'" alt="icon '.$icons_title.'"/></div>';
+        $inline_list .= '<div>'.$icons_title.' <img src="'.get_field('inline_icons_image',get_the_ID()).'" alt="icon '.$icons_title.'"/></div>';
+    }
+    return $solid_list;
+    wp_reset_query();
 }
