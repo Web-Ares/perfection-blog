@@ -18,11 +18,10 @@
                 <div class="promo__content promo__content_inner">
 
                     <!-- promo__topic -->
-                    <h1 class="promo__topic">Preview 3,000 icons</h1>
+                    <h1 class="promo__topic"><?php echo do_shortcode(get_the_title());?></h1>
                     <!-- /promo__topic -->
 
-                    <p>Our package includes a wide variety of icons
-                        that are continuously updated.</p>
+                    <p><?php the_field('page_subtitle'); ?></p>
 
                 </div>
                 <!-- /promo__content -->
@@ -37,7 +36,7 @@
     <!-- /promo -->
 
     <!-- pricing -->
-    <div class="policy">
+    <div class="pack-preview">
 
         <!-- tabs -->
         <div class="tabs">
@@ -62,13 +61,6 @@
             </div>
             <!-- /tabs__wrapper -->
 
-            <!-- tabs__wrapper -->
-            <div class="tabs__wrapper">
-
-                <?php echo get_all_categories();?>
-
-            </div>
-            <!-- /tabs__wrapper -->
 
         </div>
         <!-- /tabs -->

@@ -343,8 +343,10 @@ function get_all_categories()
     while ($q->have_posts()) {
         $q->the_post();
         $icons_title = get_the_title();
-        $solid_list .= '<div>'.$icons_title.' <img src="'.get_field('solid_icons_image',get_the_ID()).'" alt="icon '.$icons_title.'"/></div>';
-        $inline_list .= '<div>'.$icons_title.' <img src="'.get_field('inline_icons_image',get_the_ID()).'" alt="icon '.$icons_title.'"/></div>';
+        $solid_list .= '<div><h2 class="pack-preview__title">'.$icons_title.'</h2>
+        <img src="'.get_field('solid_icons_image',get_the_ID()).'" alt="icon '.$icons_title.'"/></div>';
+        $inline_list .= '<div><h2 class="pack-preview__title">'.$icons_title.'</h2>
+        <img src="'.get_field('inline_icons_image',get_the_ID()).'" alt="icon '.$icons_title.'"/></div>';
     }
     return $solid_list;
     wp_reset_query();
