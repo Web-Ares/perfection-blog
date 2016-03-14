@@ -1,6 +1,6 @@
 $(function(){
     $(document).on('invalid.wpcf7', function () {
-        $('.contact-form').find('.wpcf7-not-valid-tip').parents('fieldset').removeClass();
+        $('.contact-form').find('fieldset').removeClass('novalid');
         $('.contact-form').find('.wpcf7-not-valid-tip').each(function(){
             $(this).parents('fieldset').addClass('novalid');
         })
