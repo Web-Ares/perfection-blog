@@ -94,7 +94,37 @@
             <!-- site__centered -->
             <div class="site__centered">
 
-                <form>
+                <form method="post" action="https://app.myinstapage.com/api/email/260254" class="email-form error-on-left" novalidate="novalidate">
+                    <div class="email-form-messagebox-wrapper">
+                        <div class="email-form-messagebox-header"></div>
+                        <div class="email-form-messagebox"></div>
+                    </div>
+                    <input type="hidden" name="variant" value="A">
+
+
+
+                    <div class="input-holder field-text">
+
+
+                        <div class="field-element ">
+                            <input type="email" name="QWRkIHlvdXIgZW1haWwgdG8gZG93bmxvYWQgdGhlIGljb25z" value="">
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="redirect" class="configuration" value="http://www.iconsmind.com/thanks-100-free-icons">
+
+
+                    <input type="hidden" name="mailchimp-integration" class="configuration" value="">
+
+                    <button class="btn submit-button button_submit dynamic-button  corners  ">DOWNLOAD!</button>
+
+                    <input type="hidden" name="validation" value="">
+
+                    <input type="hidden" name="thank-you-message" value="">
+
+                </form>
+
+                <form method="post" action="https://app.myinstapage.com/api/email/260254">
                     <!--download-->
                     <div class="download">
 
