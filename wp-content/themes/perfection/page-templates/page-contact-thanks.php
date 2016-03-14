@@ -4,7 +4,7 @@
  */
 ?>
 
-<?php get_header('second'); ?>
+<?php get_header('blog'); ?>
     <!-- promo -->
     <div class="promo promo_thank-you">
 
