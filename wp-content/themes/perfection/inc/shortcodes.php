@@ -219,7 +219,7 @@ function get_visible_menu($post_id)
     return $menu_list;
 }
 
-function get_menus($post_id,$menu_name)
+function get_menus($post_id, $menu_name)
 {
     $menu_items = wp_get_nav_menu_items($menu_name, array(
         'orderby' => 'menu_order',
@@ -229,20 +229,20 @@ function get_menus($post_id,$menu_name)
         'output_key' => 'menu_order',
         'update_post_term_cache' => false));
     $menu_class = 'drop-menu__menu';
-    if($menu_name=='middle_menu'){
+    if ($menu_name == 'middle_menu') {
         $menu_class = 'drop-menu__menu';
     }
-    if($menu_name=='bottom_menu'){
+    if ($menu_name == 'bottom_menu') {
         $menu_class = 'drop-menu__menu';
     }
-    $menu_list = '<ul class="'.$menu_class.'">';
+    $menu_list = '<ul class="' . $menu_class . '">';
 
     foreach ((array)$menu_items as $key => $menu_item) {
 
         if ($post_id == $menu_item->object_id) {
-            $class = "class='active ".$menu_item->classes[0]."'";
+            $class = "class='active " . $menu_item->classes[0] . "'";
         } else {
-            $class = "class = '".$menu_item->classes[0]."'";
+            $class = "class = '" . $menu_item->classes[0] . "'";
         }
 
 
@@ -252,7 +252,7 @@ function get_menus($post_id,$menu_name)
         $menu_list .= '<li><a ' . $class . ' href="' . $url . '">' . $title . '</a></li>';
 
     }
-    return $menu_list.'</ul>';
+    return $menu_list . '</ul>';
 }
 
 function similar_posts($post_id = false)
@@ -308,29 +308,43 @@ function similar_posts($post_id = false)
 
 }
 
-function getIconsControl($post_id){
-    $get_icons = get_field('which_show_types_icons',$post_id);
-        if($get_icons==1){
-            echo '<div class="active">
-                        <a class="tabs__links" href="#">Line version</a>
-                    </div>
-                    <div>
-                        <a class="tabs__links" href="#">Solid version</a>
-                    </div>';
+function getIconsControl($get_icons,$post_id)
+{
+
+    if ($get_icons == 3) {
+        $permalink = get_the_permalink($post_id);
+        if($_GET['type']=='solid'){
+            $active = '';
+            $active_solid = 'active';
         }else{
-            echo '<div>
-                        <a class="tabs__links" href="#">Line version</a>
+            $active = 'active';
+            $active_solid = '';
+        };
+        echo '<div class="tabs__controls">
+
+                <!-- tabs__controls-wrap -->
+                <div class="tabs__controls-wrap">
+                <div class="'.$active.'">
+                        <a class="tabs__links" href="'.$permalink.'">Line version</a>
                     </div>
-                    <div class="active">
-                        <a class="tabs__links" href="#">Solid version</a>
-                    </div>';
-        }
 
+                <div class="'.$active_solid.'">
+                        <a class="tabs__links" href="'.$permalink.'?type=solid'.'">Solid version</a>
+                    </div>
+                </div>
+                <!-- /tabs__controls-wrap -->
 
+            </div>';
+    }
 }
 
-function get_all_categories()
+function get_all_categories($field_name)
 {
+    if($field_name==1){
+        $field_name = 'inline';
+    }else{
+        $field_name = 'solid';
+    }
 
     $args = array(
         'posts_per_page' => -1,
@@ -338,16 +352,15 @@ function get_all_categories()
         'post_status' => 'publish'
     );
     $q = new WP_Query($args);
-    $solid_list = '';
-    $inline_list = '';
+    $list = '';
     while ($q->have_posts()) {
         $q->the_post();
         $icons_title = get_the_title();
-        $solid_list .= '<div><h2 class="pack-preview__title">'.$icons_title.'</h2>
-        <img src="'.get_field('solid_icons_image',get_the_ID()).'" alt="icon '.$icons_title.'"/></div>';
-        $inline_list .= '<div><h2 class="pack-preview__title">'.$icons_title.'</h2>
-        <img src="'.get_field('inline_icons_image',get_the_ID()).'" alt="icon '.$icons_title.'"/></div>';
+
+        $list .= '<div><h2 class="pack-preview__title">' . $icons_title . '</h2>
+             <img src="' . get_field($field_name . '_icons_image', get_the_ID()) . '" alt="icon ' . $icons_title . '"/></div>';
+
     }
-    return $solid_list;
+    return $list;
     wp_reset_query();
 }

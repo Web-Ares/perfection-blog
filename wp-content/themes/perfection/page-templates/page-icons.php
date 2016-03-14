@@ -18,7 +18,7 @@
                 <div class="promo__content promo__content_inner">
 
                     <!-- promo__topic -->
-                    <h1 class="promo__topic"><?php echo do_shortcode(get_the_title());?></h1>
+                    <h1 class="promo__topic"><?php echo do_shortcode(get_the_title()); ?></h1>
                     <!-- /promo__topic -->
 
                     <p><?php the_field('page_subtitle'); ?></p>
@@ -41,22 +41,29 @@
         <!-- tabs -->
         <div class="tabs">
 
-            <!-- tabs__controls // Add class 'tabs__controls_hide' for hide-->
-            <div class="tabs__controls">
+            <!-- tabs__controls -->
 
-                <!-- tabs__controls-wrap -->
-                <div class="tabs__controls-wrap">
-                   <?php getIconsControl($post->ID); ?>
-                </div>
-                <!-- /tabs__controls-wrap -->
+            <?php
+            $get_icons = get_field('which_show_types_icons', $post->ID);
+            getIconsControl($get_icons, $post->ID); ?>
 
-            </div>
             <!-- /tabs__controls -->
 
             <!-- tabs__wrapper -->
             <div class="tabs__wrapper">
 
-                <?php echo get_all_categories();?>
+                <?php
+                if($get_icons==3){
+                    if($_GET['type']=='solid'){
+                        echo get_all_categories(2);
+                    }else{
+                        echo get_all_categories(1);
+                    }
+                }else{
+                    echo get_all_categories($get_icons);
+                }
+
+                ?>
 
             </div>
             <!-- /tabs__wrapper -->
