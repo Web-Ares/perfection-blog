@@ -143,27 +143,6 @@ function getAuthor($post_id)
 }
 
 
-function social_links()
-{
-    return ' <dl>
-                        <dt>stay tuned!</dt>
-                        <dd>
-
-                            <!-- dropmenu__social -->
-                            <div class="dropmenu__social">
-                                <a class="dropmenu__facebook" title="facebook" href="' . get_field('facebook_link', 'options') . '">facebook</a>
-                                <a class="dropmenu__twitter" title="twitter" href="' . get_field('twitter_link', 'options') . '">twitter</a>
-                                <a class="dropmenu__google" title="google" href="' . get_field('google_link', 'options') . '">google</a>
-                                <a class="dropmenu__pinterest" title="pinterest" href="' . get_field('pinterest_link', 'options') . '">pinterest</a>
-                            </div>
-                            <!-- /dropmenu__social -->
-
-                        </dd>
-                    </dl>';
-}
-
-add_shortcode('social_links', 'social_links');
-
 
 function count_icons()
 {
@@ -229,11 +208,12 @@ function get_menus($post_id, $menu_name)
         'output_key' => 'menu_order',
         'update_post_term_cache' => false));
     $menu_class = 'drop-menu__menu';
+
     if ($menu_name == 'middle_menu') {
-        $menu_class = 'drop-menu__menu';
+        $menu_class = 'drop-menu__navigation';
     }
     if ($menu_name == 'bottom_menu') {
-        $menu_class = 'drop-menu__menu';
+        $menu_class = 'drop-menu__legally';
     }
     $menu_list = '<ul class="' . $menu_class . '">';
 
