@@ -6,7 +6,7 @@ $authors = getAuthor($author_id);
 ?>
 
 <!-- article -->
-<article class="article">
+<div class="article">
 
     <h1><?php the_title(); ?></h1>
 
@@ -60,7 +60,7 @@ $authors = getAuthor($author_id);
         </div>
         <!-- /author -->
     <?php }; ?>
-</article>
+</div>
 <!-- /article -->
     <?php comments_template();
         echo similar_posts($post->ID);

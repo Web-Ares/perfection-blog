@@ -73,6 +73,8 @@ function add_js_css()
 
     wp_register_style('download-css', TEMPLATEURI . '/css/free-download.css');
     wp_register_style('pack-preview-css', TEMPLATEURI . '/css/pack-preview.css');
+    wp_register_style('contact-us-css', TEMPLATEURI . '/css/contact-us.css');
+    wp_register_style('thank-you-css', TEMPLATEURI . '/css/thank-you.css');
 
 
     wp_register_style('site_main', TEMPLATEURI . '/css/main.css');
@@ -91,6 +93,15 @@ function add_js_css()
         }else if(is_page_template('page-templates/page-icons.php')){
             wp_enqueue_style('site_main');
             wp_enqueue_style('pack-preview-css');
+        }else if(is_page_template('page-templates/page-contact.php')){
+            wp_enqueue_style('site_main');
+            wp_enqueue_style('contact-us-css');
+        }else if(is_page_template('page-templates/page-contact-thanks.php')){
+            wp_enqueue_style('site_main');
+            wp_enqueue_style('thank-you-css');
+        }else if(is_page_template('page-templates/page-download-thanks.php')){
+            wp_enqueue_style('site_main');
+            wp_enqueue_style('thank-you-css');
         }else if(is_page_template('page-templates/page-legacy.php')){
             wp_enqueue_style('site_main');
             wp_enqueue_style('legal-css');
