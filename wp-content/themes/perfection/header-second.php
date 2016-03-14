@@ -42,7 +42,7 @@
         <!-- site__header-layout -->
         <div class="site__header-layout">
             <!-- logo -->
-            <a href="<?php echo home_url(); ?>" class="logo">
+            <a href="<?php echo home_url(); ?>" class="logo logo_inner">
                 <img src="<?php echo TEMPLATEURI ?>/img/logo_inside.png" alt="logo">
             </a>
             <!-- /logo -->
