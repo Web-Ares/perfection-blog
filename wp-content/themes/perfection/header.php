@@ -44,13 +44,13 @@
             <?php if(is_front_page()){?>
                 <!-- logo -->
                 <h1 class="logo">
-                    <img src="<?php echo TEMPLATEURI ?>/img/logo-small.png" alt="logo">
+                    <img src="<?php echo TEMPLATEURI ?>/img/logo-small.png?<?php echo time();?>" alt="logo">
                 </h1>
                 <!-- /logo -->
             <?php }else{?>
                 <!-- logo -->
                 <a href="<?php home_url(); ?>" class="logo">
-                    <img src="<?php echo TEMPLATEURI ?>/img/logo-small.png" alt="logo">
+                    <img src="<?php echo TEMPLATEURI ?>/img/logo-small.png?<?php echo time();?>" alt="logo">
                 </a>
                 <!-- /logo -->
             <?php }?>

@@ -24,7 +24,7 @@
 
             <!-- logo -->
             <a href="<?php echo home_url(); ?>" class="logo">
-                <img src="<?php echo TEMPLATEURI ?>/img/logo_inside.png" alt="logo">
+                <img src="<?php echo TEMPLATEURI ?>/img/logo_inside.png?<?php echo time();?>" alt="logo">
             </a>
             <!-- /logo -->
 

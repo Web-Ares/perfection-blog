@@ -12,6 +12,35 @@ remove_action('wp_head', 'feed_links', 2);
 remove_action('wp_head', 'feed_links_extra', 3);
 remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'signuppageheaders');
+remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
+remove_action( 'wp_head', 'wp_oembed_add_host_js' );
+
+// Отключаем сам REST API
+add_filter('rest_enabled', '__return_false');
+
+// Отключаем фильтры REST API
+remove_action( 'xmlrpc_rsd_apis',            'rest_output_rsd' );
+remove_action( 'wp_head',                    'rest_output_link_wp_head', 10, 0 );
+remove_action( 'template_redirect',          'rest_output_link_header', 11, 0 );
+remove_action( 'auth_cookie_malformed',      'rest_cookie_collect_status' );
+remove_action( 'auth_cookie_expired',        'rest_cookie_collect_status' );
+remove_action( 'auth_cookie_bad_username',   'rest_cookie_collect_status' );
+remove_action( 'auth_cookie_bad_hash',       'rest_cookie_collect_status' );
+remove_action( 'auth_cookie_valid',          'rest_cookie_collect_status' );
+remove_filter( 'rest_authentication_errors', 'rest_cookie_check_errors', 100 );
+
+// Отключаем события REST API
+remove_action( 'init',          'rest_api_init' );
+remove_action( 'rest_api_init', 'rest_api_default_filters', 10, 1 );
+remove_action( 'parse_request', 'rest_api_loaded' );
+
+// Отключаем Embeds связанные с REST API
+remove_action( 'rest_api_init',          'wp_oembed_register_route'              );
+remove_filter( 'rest_pre_serve_request', '_oembed_rest_pre_serve_request', 10, 4 );
+
+remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
+// если собираетесь выводить вставки из других сайтов на своем, то закомментируйте след. строку.
+remove_action( 'wp_head',                'wp_oembed_add_host_js'                 );
 
 function allow_svg_upload_mimes( $mimes ) {
     $mimes['svg'] = 'image/svg+xml';
@@ -44,7 +73,7 @@ add_action('wp_enqueue_scripts', 'add_js_css');
 function add_js_css()
 {
     wp_deregister_script('jquery');
-    wp_register_script('jquery', TEMPLATEURI.'/js/jquery-2.1.3.min.js', false, '2.1.3', false);
+    wp_register_script('jquery', TEMPLATEURI.'/js/jquery-2.1.3.min.js', false, '2.1.3', true);
     wp_enqueue_script('jquery');
 
     wp_register_script('iscroll', TEMPLATEURI.'/js/iscroll.js', false, '2.1.3', true);
@@ -52,14 +81,11 @@ function add_js_css()
 
     wp_register_script('swiper', TEMPLATEURI.'/js/swiper.min.js', false, '2.1.3', true);
 
-//    wp_register_script('share', TEMPLATEURI.'/js/share.js', false, '1', true);
-//    wp_enqueue_script('share');
-
     wp_register_script('main', TEMPLATEURI.'/js/jquery.main.js', false, '1', true);
-    wp_enqueue_script('main');
 
-    wp_register_style('site-style', TEMPLATEURI . '/style.css');
-    wp_enqueue_style('site-style');
+
+//    wp_register_style('site-style', TEMPLATEURI . '/style.css');
+//    wp_enqueue_style('site-style');
 
     wp_register_style('swiper-css', TEMPLATEURI . '/css/swiper.min.css');
 
@@ -79,13 +105,23 @@ function add_js_css()
 
     wp_register_style('site_main', TEMPLATEURI . '/css/main.css');
 
+    add_action('wp_enqueue_scripts', 'add_wpcf7_scripts');
+    function add_wpcf7_scripts() {
+        if (is_page_template('page-templates/page-contact.php')) {
+            if (function_exists('wpcf7_enqueue_scripts')) {
+                wpcf7_enqueue_scripts();
+                wpcf7_enqueue_styles();
+            }
+        }
+    }
 
     if(is_front_page()){
-        wp_enqueue_script('swiper');
-        wp_enqueue_style('swiper-css');
-        wp_enqueue_style('site_main');
+        wp_enqueue_style('swiper-css', false, '2.1.3', true);
+        wp_enqueue_style('site_main', false, '2.1.3', false);
+        wp_enqueue_script('swiper', false, '2.1.3', true);
+        wp_enqueue_script('main');
     }else{
-
+        wp_enqueue_script('main');
 
         if (get_post_type()=='post' and !is_single()) {
             wp_enqueue_style('blog_main-css');

@@ -24,7 +24,7 @@
         <div class="site__header-layout">
             <!-- logo -->
             <a href="<?php echo home_url(); ?>" class="logo logo_inner">
-                <img src="<?php echo TEMPLATEURI ?>/img/logo_inside.png" alt="logo">
+                <img src="<?php echo TEMPLATEURI ?>/img/logo_inside.png?<?php echo time();?>" alt="logo">
             </a>
             <!-- /logo -->
 
