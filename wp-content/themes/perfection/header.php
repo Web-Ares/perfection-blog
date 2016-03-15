@@ -54,6 +54,9 @@
                 </a>
                 <!-- /logo -->
             <?php }?>
+            <!-- header-menu__mobile-item -->
+            <a href="/view-icons/" class="header-menu__mobile-item">ICONS</a>
+            <!-- /header-menu__mobile-item -->
 
             <?php echo get_visible_menu($post->ID);?>
 
