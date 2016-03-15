@@ -94,37 +94,9 @@
             <!-- site__centered -->
             <div class="site__centered">
 
-                <form method="post" action="https://app.myinstapage.com/api/email/260254" class="email-form error-on-left" novalidate="novalidate">
-                    <div class="email-form-messagebox-wrapper">
-                        <div class="email-form-messagebox-header"></div>
-                        <div class="email-form-messagebox"></div>
-                    </div>
-                    <input type="hidden" name="variant" value="A">
 
 
-
-                    <div class="input-holder field-text">
-
-
-                        <div class="field-element ">
-                            <input type="email" name="QWRkIHlvdXIgZW1haWwgdG8gZG93bmxvYWQgdGhlIGljb25z" value="">
-                        </div>
-                    </div>
-
-                    <input type="hidden" name="redirect" class="configuration" value="http://www.iconsmind.com/thanks-100-free-icons">
-
-
-                    <input type="hidden" name="mailchimp-integration" class="configuration" value="">
-
-                    <button class="btn submit-button button_submit dynamic-button  corners  ">DOWNLOAD!</button>
-
-                    <input type="hidden" name="validation" value="">
-
-                    <input type="hidden" name="thank-you-message" value="">
-
-                </form>
-
-                <form method="post" action="https://app.myinstapage.com/api/email/260254">
+                <form action="//vectorain.us4.list-manage.com/subscribe/post?u=61927fc103d96b8ec388bf0fe&amp;id=9af64abdb1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate >
                     <!--download-->
                     <div class="download">
 
@@ -132,9 +104,10 @@
                         <span class="download__title">Subscribe to our newsletter to get your free 100 icons</span>
                         <!-- /download__title -->
 
-                        <input type="text" placeholder="Enter your email"/>
-                        <button class="btn btn_6">Download</button>
-
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email" required/>
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_61927fc103d96b8ec388bf0fe_9af64abdb1" tabindex="-1" value=""></div>
+                        <button class="btn btn_6" id="mc-embedded-subscribe">Download</button>
+                        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
                     </div>
                     <!--/download-->
                 </form>
