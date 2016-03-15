@@ -14,7 +14,8 @@ remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'signuppageheaders');
 remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
 remove_action( 'wp_head', 'wp_oembed_add_host_js' );
-
+add_filter( 'wpcf7_load_js', '__return_false' );
+add_filter( 'wpcf7_load_css', '__return_false' );
 // Отключаем сам REST API
 add_filter('rest_enabled', '__return_false');
 
@@ -105,14 +106,12 @@ function add_js_css()
 
     wp_register_style('site_main', TEMPLATEURI . '/css/main.css');
 
-    add_action('wp_enqueue_scripts', 'add_wpcf7_scripts');
-    function add_wpcf7_scripts() {
-        if (is_page_template('page-templates/page-contact.php')) {
-            if (function_exists('wpcf7_enqueue_scripts')) {
-                wpcf7_enqueue_scripts();
-                wpcf7_enqueue_styles();
-            }
-        }
+    if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+        wpcf7_enqueue_scripts();
+    }
+
+    if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
+        wpcf7_enqueue_styles();
     }
 
     if(is_front_page()){
