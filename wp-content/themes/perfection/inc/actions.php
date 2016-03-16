@@ -80,6 +80,11 @@ function add_js_css()
     wp_register_script('iscroll', TEMPLATEURI.'/js/iscroll.js', false, '2.1.3', true);
     wp_enqueue_script('iscroll');
 
+    wp_register_script('cookie', TEMPLATEURI.'/js/jquery.cookie.js', false, '2.1.3', true);
+    wp_enqueue_script('cookie');
+    wp_register_script('bodymovin', TEMPLATEURI.'/js/bodymovin.js', false, '2.1.3', true);
+    wp_enqueue_script('bodymovin');
+
     wp_register_script('swiper', TEMPLATEURI.'/js/swiper.min.js', false, '2.1.3', true);
 
     wp_register_script('main', TEMPLATEURI.'/js/jquery.main.js', false, '1', true);

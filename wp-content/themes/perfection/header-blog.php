@@ -78,21 +78,21 @@
                 </div>
                 <!-- /drop-menu__inner-wrap -->
 
-                <!-- drop-menu__inner -->
-                <span class="copyright">© ICON54 2016. All rights reserved</span>
-                <!-- drop-menu__inner -->
-
-                <!-- social -->
-                <div class="social">
-                    <a href="#" class="social__item social__item_mail adoric_f2f0a9ee"></a>
-                    <a href="https://dribbble.com/icon54" target="_blank" class="social__item social__item_btn"></a>
-                    <a href="https://twitter.com/54_icon" target="_blank" class="social__item social__item_tw"></a>
-                    <a href="https://www.facebook.com/Icon54-1762416167312152/?fref=ts" target="_blank" class="social__item social__item_fb"></a>
-                </div>
-                <!-- /social -->
-
             </div>
             <!-- /drop-menu__inner -->
+
+            <!-- drop-menu__inner -->
+            <span class="copyright">© ICON54 2016. All rights reserved</span>
+            <!-- drop-menu__inner -->
+
+            <!-- social -->
+            <div class="social">
+                <a href="#" class="social__item social__item_mail adoric_f2f0a9ee"></a>
+                <a href="https://dribbble.com/icon54" target="_blank" class="social__item social__item_btn"></a>
+                <a href="https://twitter.com/54_icon" target="_blank" class="social__item social__item_tw"></a>
+                <a href="https://www.facebook.com/Icon54-1762416167312152/?fref=ts" target="_blank" class="social__item social__item_fb"></a>
+            </div>
+            <!-- /social -->
 
         </div>
         <!-- /drop-menu -->
