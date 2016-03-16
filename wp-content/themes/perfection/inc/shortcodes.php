@@ -72,7 +72,7 @@ if (!function_exists('adoric_paging_nav')) :
 		C480.111,136.775,497.92,118.275,512.002,97.211z"/>
                             </svg>
                 </a>
-                <a href="#" class="pagination__social-item pagination__social-item_gg">
+                <a href="https://plus.google.com/103675045516528900254" class="pagination__social-item pagination__social-item_gg">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          x="0px" y="0px"
                          viewBox="0 0 508.52 508.52" style="enable-background:new 0 0 508.52 508.52;"
