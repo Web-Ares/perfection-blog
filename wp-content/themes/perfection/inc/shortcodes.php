@@ -48,7 +48,7 @@ if (!function_exists('adoric_paging_nav')) :
                 <?php previous_posts_link('newer posts'); ?>
             <?php endif; ?>
             <div class="pagination__social">
-                <a href="https://www.facebook.com/Icon54-1762416167312152/?fref=ts"
+                <a href="https://www.facebook.com/Icon54-1762416167312152/?fref=ts"  target="_blank"
                    class="pagination__social-item pagination__social-item_fb">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          x="0px" y="0px"
@@ -57,7 +57,7 @@ if (!function_exists('adoric_paging_nav')) :
                                     c-33.016,0-34.604,12.328-34.604,35.342l-0.131,44.162h79.346l-9.354,88.225L296.36,256L296.296,512z"/>
                             </svg>
                 </a>
-                <a href="https://twitter.com/54_icon" class="pagination__social-item pagination__social-item_tw">
+                <a href="https://twitter.com/54_icon" target="_blank" class="pagination__social-item pagination__social-item_tw">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          x="0px" y="0px"
                          viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;"
@@ -72,7 +72,7 @@ if (!function_exists('adoric_paging_nav')) :
 		C480.111,136.775,497.92,118.275,512.002,97.211z"/>
                             </svg>
                 </a>
-                <a href="https://plus.google.com/103675045516528900254" class="pagination__social-item pagination__social-item_gg">
+                <a href="https://plus.google.com/103675045516528900254" target="_blank" class="pagination__social-item pagination__social-item_gg">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          x="0px" y="0px"
                          viewBox="0 0 508.52 508.52" style="enable-background:new 0 0 508.52 508.52;"

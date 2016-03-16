@@ -33,7 +33,7 @@
             <div class="social social_inner">
                 <span class="social__title">Spread the love</span>
                 <div class="social_inner">
-                    <a href="https://www.facebook.com/Icon54-1762416167312152/?fref=ts" class="social_inner-item pagination__social-item_fb">
+                    <a href="https://www.facebook.com/Icon54-1762416167312152/?fref=ts" target="_blank" class="social_inner-item pagination__social-item_fb">
 
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -42,7 +42,7 @@
                             </svg>
 
                     </a>
-                    <a href="https://twitter.com/54_icon" class="social_inner-item pagination__social-item_tw">
+                    <a href="https://twitter.com/54_icon" target="_blank" class="social_inner-item pagination__social-item_tw">
 
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;"
@@ -58,7 +58,7 @@
                             </svg>
 
                     </a>
-                    <a href="https://plus.google.com/103675045516528900254" class="social_inner-item pagination__social-item_gg">
+                    <a href="https://plus.google.com/103675045516528900254"  target="_blank" class="social_inner-item pagination__social-item_gg">
 
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 508.52 508.52" style="enable-background:new 0 0 508.52 508.52;" xml:space="preserve">

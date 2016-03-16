@@ -34,9 +34,9 @@
             <!-- social -->
             <div class="social social_1">
                 Follow us
-                <a href="https://dribbble.com/icon54" class="social__item social__item_btn"></a>
-                <a href="https://twitter.com/54_icon" class="social__item social__item_tw"></a>
-                <a href="https://www.facebook.com/Icon54-1762416167312152/?fref=ts" class="social__item social__item_fb"></a>
+                <a href="https://dribbble.com/icon54" target="_blank" class="social__item social__item_btn"></a>
+                <a href="https://twitter.com/54_icon" target="_blank" class="social__item social__item_tw"></a>
+                <a href="https://www.facebook.com/Icon54-1762416167312152/?fref=ts" target="_blank" class="social__item social__item_fb"></a>
             </div>
             <!-- /social -->
 
