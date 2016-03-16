@@ -7,33 +7,12 @@
     <meta name="format-detection" content="address=no">
     <link rel="icon" href="<?php echo TEMPLATEURI ?>/favicon.png" type="image/png">
     <title><?php document_title(); ?></title>
-    <style>.preloader{opacity:1;visibility:visible;z-index:10;position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,1);-webkit-transition:opacity .3s ease-in-out,visibility .3s ease-in-out;transition:opacity .3s ease-in-out,visibility .3s ease-in-out}.preloader.hide{opacity:0;visibility:hidden}.preloader__wrap{position:absolute;width:350px;height:70px;left:50%;top:50%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);overflow:hidden;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default}.preloader__wrap div{position:absolute;width:30px;height:46px;opacity:0;font-family:"Nexa Regular", sans-serif;font-size:26px;color:#fff;-webkit-animation:move 2.5s linear infinite;animation:move 2.5s linear infinite;-webkit-transform:rotate(180deg);transform:rotate(180deg);-webkit-animation-delay:-1.8s;animation-delay:-1.8s}.preloader__wrap div:nth-child(2){-webkit-animation-delay:-1.5s;animation-delay:-1.5s}.preloader__wrap div:nth-child(3){-webkit-animation-delay:-1.2s;animation-delay:-1.2s}.preloader__wrap div:nth-child(4){-webkit-animation-delay:-0.9s;animation-delay:-0.9s}.preloader__wrap div:nth-child(5){-webkit-animation-delay:-0.6s;animation-delay:-0.6s;}.preloader__wrap div:nth-child(6){-webkit-animation-delay:-0.3s;animation-delay:-0.3s;}.preloader__wrap div:nth-child(7){-webkit-animation-delay:0s;animation-delay:0s;}@-webkit-keyframes move{0%{left:0;opacity:0;}30%{left:41%;-webkit-transform:rotate(0deg);opacity:1;}65%{left:59%;-webkit-transform:rotate(0deg);opacity:1;}90%{left:100%;transform:rotate(-180deg);opacity:0;}100%{left:100%;transform:rotate(-180deg);opacity:0;}}@keyframes move{0%{left:0;opacity:0;}30%{left:41%;transform:rotate(0deg);opacity:1;}65%{left:59%;transform:rotate(0deg);opacity:1;}90%{left:100%;transform:rotate(-180deg);opacity:0;}100%{left:100%;transform:rotate(-180deg);opacity:0;}}@media (min-width:992px){.preloader__wrap{width:400px;overflow:visible;}}</style>
     <?php wp_head(); ?>
 </head>
 <body>
 
 <!-- site -->
 <div class="site">
-
-    <!--preloader-->
-    <div class="preloader">
-
-        <!--preloader__wrap-->
-        <div class="preloader__wrap">
-            <div>G</div>
-            <div>N</div>
-            <div>I</div>
-            <div>D</div>
-            <div>A</div>
-            <div>O</div>
-            <div>L</div>
-        </div>
-        <!--/preloader__wrap-->
-
-    </div>
-    <!--/preloader-->
-
-
 
     <!-- site__header -->
     <header class="site__header">
@@ -104,9 +83,9 @@
                 <!-- social -->
                 <div class="social">
                     <a href="#" class="social__item social__item_mail"></a>
-                    <a href="#" class="social__item social__item_btn"></a>
-                    <a href="#" class="social__item social__item_tw"></a>
-                    <a href="#" class="social__item social__item_fb"></a>
+                    <a href="https://dribbble.com/icon54" class="social__item social__item_btn"></a>
+                    <a href="https://twitter.com/54_icon" class="social__item social__item_tw"></a>
+                    <a href="https://www.facebook.com/Icon54-1762416167312152/?fref=ts" class="social__item social__item_fb"></a>
                 </div>
                 <!-- /social -->
 

@@ -48,18 +48,16 @@ if (!function_exists('adoric_paging_nav')) :
                 <?php previous_posts_link('newer posts'); ?>
             <?php endif; ?>
             <div class="pagination__social">
-                <a href="#" class="pagination__social-item pagination__social-item_fb">
-
+                <a href="https://www.facebook.com/Icon54-1762416167312152/?fref=ts"
+                   class="pagination__social-item pagination__social-item_fb">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          x="0px" y="0px"
                          viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                             <path style="fill:#d9d9d9;" d="M296.296,512H200.36V256h-64v-88.225l64-0.029l-0.104-51.976C200.256,43.794,219.773,0,304.556,0h70.588v88.242h-44.115
                                     c-33.016,0-34.604,12.328-34.604,35.342l-0.131,44.162h79.346l-9.354,88.225L296.36,256L296.296,512z"/>
                             </svg>
-
                 </a>
-                <a href="#" class="pagination__social-item pagination__social-item_tw">
-
+                <a href="https://twitter.com/54_icon" class="pagination__social-item pagination__social-item_tw">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          x="0px" y="0px"
                          viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;"
@@ -73,10 +71,8 @@ if (!function_exists('adoric_paging_nav')) :
 		c46.486,29.807,101.701,47.197,161.021,47.197c193.211,0,298.868-160.062,298.868-298.872c0-4.554-0.104-9.084-0.305-13.59
 		C480.111,136.775,497.92,118.275,512.002,97.211z"/>
                             </svg>
-
                 </a>
                 <a href="#" class="pagination__social-item pagination__social-item_gg">
-
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          x="0px" y="0px"
                          viewBox="0 0 508.52 508.52" style="enable-background:new 0 0 508.52 508.52;"
@@ -93,7 +89,6 @@ if (!function_exists('adoric_paging_nav')) :
                         <polygon style="fill:#d9d9d9;" points="413.172,133.741 413.172,39.442 381.39,39.442 381.39,133.741 286.042,133.741
                                     286.042,165.523 381.39,165.523 381.39,261.919 413.172,261.919 413.172,165.523 508.52,165.523 508.52,133.741 			"/>
                             </svg>
-
                 </a>
             </div>
             <?php if (get_next_posts_link()) : ?>
@@ -141,7 +136,6 @@ function getAuthor($post_id)
     $author['url'] = get_field('link', $post_id);
     return $author;
 }
-
 
 
 function count_icons()
@@ -288,15 +282,15 @@ function similar_posts($post_id = false)
 
 }
 
-function getIconsControl($get_icons,$post_id)
+function getIconsControl($get_icons, $post_id)
 {
 
     if ($get_icons == 3) {
         $permalink = get_the_permalink($post_id);
-        if($_GET['type']=='solid'){
+        if ($_GET['type'] == 'solid') {
             $active = '';
             $active_solid = 'active';
-        }else{
+        } else {
             $active = 'active';
             $active_solid = '';
         };
@@ -304,12 +298,12 @@ function getIconsControl($get_icons,$post_id)
 
                 <!-- tabs__controls-wrap -->
                 <div class="tabs__controls-wrap">
-                <div class="'.$active.'">
-                        <a class="tabs__links" href="'.$permalink.'">Line version</a>
+                <div class="' . $active . '">
+                        <a class="tabs__links" href="' . $permalink . '">Line version</a>
                     </div>
 
-                <div class="'.$active_solid.'">
-                        <a class="tabs__links" href="'.$permalink.'?type=solid'.'">Solid version</a>
+                <div class="' . $active_solid . '">
+                        <a class="tabs__links" href="' . $permalink . '?type=solid' . '">Solid version</a>
                     </div>
                 </div>
                 <!-- /tabs__controls-wrap -->
@@ -320,9 +314,9 @@ function getIconsControl($get_icons,$post_id)
 
 function get_all_categories($field_name)
 {
-    if($field_name==1){
+    if ($field_name == 1) {
         $field_name = 'inline';
-    }else{
+    } else {
         $field_name = 'solid';
     }
 
