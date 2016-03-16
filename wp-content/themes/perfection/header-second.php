@@ -30,7 +30,7 @@
 
 
     <!-- site__header -->
-    <header class="site__header site__header_inner">
+    <header class="site__header site__header_inner header-top">
 
         <!-- site__header-layout -->
         <div class="site__header-layout">

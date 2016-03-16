@@ -25,7 +25,7 @@
 <div class="site">
 
     <!-- site__header -->
-    <header class="site__header">
+    <header class="site__header header-top">
 
         <!-- site__header-layout -->
         <div class="site__header-layout">
