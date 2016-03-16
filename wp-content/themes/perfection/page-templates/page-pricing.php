@@ -58,7 +58,9 @@
                                 <!-- /pricing__price -->
 
                                 <!-- pricing__pic -->
-                                <div class="pricing__pic" style="background-image: url('.get_sub_field('tariff_image').')"></div>
+                                <div class="pricing__pic">
+                                    <img src="'.get_sub_field('tariff_image').'" alt="Pricing-icon">
+                                </div>
                                 <!-- /pricing__pic -->
 
                                 <!-- pricing__purchase -->
@@ -85,19 +87,6 @@
             <?php echo get_the_content(); ?>
         </div>
         <!-- /pricing__item pricing_pack -->
-
-        <!-- pricing__pay -->
-        <div class="pricing__pay">
-            <div class="pricing__pay-item"
-                 style="background-image:url(<?php echo TEMPLATEURI ?>/pic/pricing-pay01.png)"></div>
-            <div class="pricing__pay-item"
-                 style="background-image:url(<?php echo TEMPLATEURI ?>/pic/pricing-pay02.png)"></div>
-            <div class="pricing__pay-item"
-                 style="background-image:url(<?php echo TEMPLATEURI ?>/pic/pricing-pay03.png)"></div>
-            <div class="pricing__pay-item"
-                 style="background-image:url(<?php echo TEMPLATEURI ?>/pic/pricing-pay04.png)"></div>
-        </div>
-        <!-- /pricing__pay -->
 
     </div>
     <!-- /pricing -->
