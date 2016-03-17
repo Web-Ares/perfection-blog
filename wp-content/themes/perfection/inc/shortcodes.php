@@ -340,5 +340,5 @@ function get_all_categories($field_name)
 }
 
 function get_downloadlink(){
-    echo '/download/';
+    echo 'https://icon54.com/download/';
 }
