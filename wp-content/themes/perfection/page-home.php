@@ -9,7 +9,7 @@
 <?php if (have_posts()) {
     the_post();
 
-    echo do_shortcode(get_the_content());
+    echo do_shortcode(get_field('home_content'));
 } ?>
 
 
