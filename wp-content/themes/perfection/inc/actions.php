@@ -77,8 +77,8 @@ function add_js_css()
     wp_register_script('jquery', TEMPLATEURI.'/js/jquery-2.1.3.min.js', false, '2.1.3', true);
     wp_enqueue_script('jquery');
 
-    wp_register_script('iscroll', TEMPLATEURI.'/js/iscroll.js', false, '2.1.3', true);
-    wp_enqueue_script('iscroll');
+    wp_register_script('nicescroll', TEMPLATEURI.'/js/jquery.nicescroll.js', false, '2.1.3', true);
+    wp_enqueue_script('nicescroll');
 
     wp_register_script('cookie', TEMPLATEURI.'/js/jquery.cookie.js', false, '2.1.3', true);
     wp_enqueue_script('cookie');
@@ -88,10 +88,6 @@ function add_js_css()
     wp_register_script('swiper', TEMPLATEURI.'/js/swiper.min.js', false, '2.1.3', true);
 
     wp_register_script('main', TEMPLATEURI.'/js/jquery.main.js', false, '1', true);
-
-
-//    wp_register_style('site-style', TEMPLATEURI . '/style.css');
-//    wp_enqueue_style('site-style');
 
     wp_register_style('swiper-css', TEMPLATEURI . '/css/swiper.min.css');
 
