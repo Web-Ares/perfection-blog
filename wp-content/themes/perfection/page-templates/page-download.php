@@ -93,10 +93,7 @@
 
             <!-- site__centered -->
             <div class="site__centered">
-
-
-
-                <form action="//vectorain.us4.list-manage.com/subscribe/post?u=61927fc103d96b8ec388bf0fe&amp;id=9af64abdb1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate >
+                <form action="//vectorain.us4.list-manage.com/subscribe/post?u=61927fc103d96b8ec388bf0fe&amp;id=9af64abdb1" method="post" data-thank = "/thanks-for-download-page/" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
                     <!--download-->
                     <div class="download">
 
@@ -107,7 +104,6 @@
                         <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email" required/>
                         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_61927fc103d96b8ec388bf0fe_9af64abdb1" tabindex="-1" value=""></div>
                         <button class="btn btn_6" id="mc-embedded-subscribe">Download</button>
-                        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
                     </div>
                     <!--/download-->
                 </form>
