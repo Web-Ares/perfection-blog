@@ -14,7 +14,9 @@
             <!-- promo__content -->
             <div class="promo__content">
 
-                <img src="<?php echo TEMPLATEURI ?>/img/icons-tick_1.png" alt="tick" class="promo__img"/>
+                <!-- promo__tick -->
+                <div class="promo__tick promo__tick_green"></div>
+                <!-- /promo__tick -->
 
                 <!-- promo__topic -->
                 <h1 class="promo__topic">Thank you</h1>
