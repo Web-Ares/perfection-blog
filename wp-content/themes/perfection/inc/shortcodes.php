@@ -299,11 +299,11 @@ function getIconsControl($get_icons, $post_id)
                 <!-- tabs__controls-wrap -->
                 <div class="tabs__controls-wrap">
                 <div class="' . $active . '">
-                        <a class="tabs__links" href="' . $permalink . '">Line version</a>
+                        <a class="btn btn_7" href="' . $permalink . '">Line version</a>
                     </div>
 
                 <div class="' . $active_solid . '">
-                        <a class="tabs__links" href="' . $permalink . '?type=solid' . '">Solid version</a>
+                        <a class="btn btn_8" href="' . $permalink . '?type=solid' . '">Solid version</a>
                     </div>
                 </div>
                 <!-- /tabs__controls-wrap -->

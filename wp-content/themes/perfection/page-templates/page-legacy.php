@@ -45,10 +45,10 @@
                 <!-- tabs__controls-wrap -->
                 <div class="tabs__controls-wrap">
                     <div <?php  if($post->ID==237) echo 'class="active"';?>>
-                        <a class="tabs__links" href="<?php the_permalink(237) ?>">Terms of use</a>
+                        <a class="btn btn_7" href="<?php the_permalink(237) ?>">Terms of use</a>
                     </div>
                     <div <?php  if($post->ID==233) echo 'class="active"';?>>
-                        <a class="tabs__links" href="<?php the_permalink(233) ?>">Privacy policy</a>
+                        <a class="btn btn_8" href="<?php the_permalink(233) ?>">Privacy policy</a>
                     </div>
                 </div>
                 <!-- /tabs__controls-wrap -->
