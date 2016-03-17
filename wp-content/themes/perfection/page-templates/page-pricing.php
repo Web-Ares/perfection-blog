@@ -65,7 +65,7 @@
 
                                 <!-- pricing__purchase -->
                                 <ul class="pricing__purchase">
-                                    '.get_sub_field('tariff_description').'
+                                    '.do_shortcode(get_sub_field('tariff_description')).'
                                 </ul>
                                 <!-- /pricing__purchase -->
 
@@ -84,7 +84,7 @@
 
         <!-- pricing__item pricing_pack -->
         <div class="pricing__item pricing_pack">
-            <?php echo get_the_content(); ?>
+            <?php echo do_shortcode(get_the_content()); ?>
         </div>
         <!-- /pricing__item pricing_pack -->
 

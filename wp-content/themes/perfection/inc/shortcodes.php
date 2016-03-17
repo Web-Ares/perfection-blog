@@ -338,3 +338,7 @@ function get_all_categories($field_name)
     return $list;
     wp_reset_query();
 }
+
+function get_downloadlink(){
+    echo '/download/';
+}

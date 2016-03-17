@@ -16,17 +16,15 @@
             <!-- promo__content -->
             <div class="promo__content">
 
-                <img src="<?php echo TEMPLATEURI ?>/img/icons-tick.png" alt="tick" class="promo__img"/>
-
                 <!-- promo__topic -->
                 <h1 class="promo__topic">Thank you</h1>
                 <!-- /promo__topic -->
 
                 <?php the_content(); ?>
 
-                <a href="<?php the_permalink(241); ?>" class="btn btn_9"><span>Upgrade for full access</span></a>
+                <a href="<?php get_downloadlink();?>" class="btn btn_9"><span>Download</span></a>
 
-                <span class="promo__note">View  entire icon collection</span>
+                <a href="<?php the_permalink(241); ?>" class="btn btn_11"><span>Upgrade for full access</span></a>
 
             </div>
             <!-- /promo__content -->
