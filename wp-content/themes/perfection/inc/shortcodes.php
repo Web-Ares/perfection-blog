@@ -340,5 +340,52 @@ function get_all_categories($field_name)
 }
 
 function get_downloadlink(){
-    echo 'https://icon54.com/download/';
+    echo do_shortcode('[download id="1"]');
 }
+
+function impressed_slides()
+{
+    $slides = '';
+    if (have_rows('gallery')) {
+        while (have_rows('gallery')) {
+            the_row();
+            $ava = wp_get_attachment_image_src(get_sub_field('g_small_image'), '124x124');
+            $slides .= '<!-- swiper-slide -->
+                    <div class="swiper-slide" data-photo="'.$ava[0].'"  data-company="pic/we-impressed_pic.jpg">
+
+                        <!-- we-impressed__layout -->
+                        <div class="we-impressed__layout">
+
+                            <div class="we-impressed__layout-wrap">
+
+                                <!-- we-impressed__text -->
+                                <div class="we-impressed__text">
+                                '.get_sub_field('g_content').'
+
+                                </div>
+                                <!-- we-impressed__text -->
+
+                                <!--we-impressed__info-user-->
+                                <div class="we-impressed__info-user">
+                                    '.get_sub_field('g_author').'
+                                </div>
+                                <!--/we-impressed__info-user-->
+
+                            </div>
+
+                        </div>
+                        <!-- /we-impressed__layout -->
+
+                        <!-- we-impressed__pic -->
+                        <div class="we-impressed__pic" style="background-image: url('.get_sub_field('g_image').')">
+                        </div>
+                        <!-- /we-impressed__pic -->
+
+                    </div>
+                    <!-- /swiper-slide -->';
+        }
+    }
+  return $slides;
+}
+
+add_shortcode('impressed_slides', 'impressed_slides');
