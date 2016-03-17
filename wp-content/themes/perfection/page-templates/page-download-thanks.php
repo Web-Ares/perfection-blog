@@ -21,7 +21,6 @@
                 <!-- /promo__topic -->
 
                 <?php the_content(); ?>
-                <?php echo do_shortcode('[download]');?>
                 <a href="<?php get_downloadlink();?>" class="btn btn_9"><span>Download</span></a>
 
                 <a href="<?php the_permalink(241); ?>" class="btn btn_11"><span>Upgrade for full access</span></a>
