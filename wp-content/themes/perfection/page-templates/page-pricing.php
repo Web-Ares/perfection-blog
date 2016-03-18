@@ -84,7 +84,7 @@
 
         <!-- pricing__item pricing_pack -->
         <div class="pricing__item pricing_pack">
-            <?php echo do_shortcode(get_the_content()); ?>
+            <?php echo do_shortcode(get_field('pr_content')); ?>
         </div>
         <!-- /pricing__item pricing_pack -->
 
