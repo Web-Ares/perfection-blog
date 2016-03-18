@@ -350,7 +350,7 @@ function impressed_slides()
         while (have_rows('gallery')) {
             the_row();
             $ava = wp_get_attachment_image_src(get_sub_field('g_small_image'), '124x124');
-            $company = wp_get_attachment_image_src(get_sub_field('g_companys_logo'), '124x124');
+            $company = wp_get_attachment_image_src(get_sub_field('g_companys_logo'), 'full');
 
             $slides .= '<!-- swiper-slide -->
                     <div class="swiper-slide" data-photo="'.$ava[0].'"  data-company="'.$company[0].'">
