@@ -39,7 +39,9 @@
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-W2BZ82');</script>
+    })(window,document,'script','dataLayer','GTM-W2BZ82');
+
+</script>
 <!-- End Google Tag Manager -->
 <!-- site -->
 <div class="site">
@@ -53,7 +55,7 @@
 
 
     <!-- site__header -->
-    <header class="site__header site__header_inner header-top">
+    <header class="site__header site__header_inner">
 
         <!-- site__header-layout -->
         <div class="site__header-layout">

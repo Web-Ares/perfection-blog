@@ -21,7 +21,8 @@
                     <h1 class="promo__topic"><?php echo do_shortcode(get_the_title()); ?></h1>
                     <!-- /promo__topic -->
 
-                    <p><?php the_field('page_subtitle'); ?></p>
+                    <p>Our package includes a wide variety of icons</p>
+                    <p>that are continuously updated.</p>
 
                 </div>
                 <!-- /promo__content -->

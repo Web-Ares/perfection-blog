@@ -21,7 +21,9 @@
                     <h1 class="promo__topic"><?php the_title(); ?></h1>
                     <!-- /promo__topic -->
 
-                    <p><?php the_field('page_subtitle'); ?></p>
+                    <p>Download our free 100 icon trial pack. You will receive the same</p>
+                    <p>File variations that comes with the full package: </p>
+
                     <span class="promo__topic-descr">AI. EPS. SKETCH. SVG. PNG. WEB FONTS </span>
                 </div>
                 <!-- /promo__content -->
