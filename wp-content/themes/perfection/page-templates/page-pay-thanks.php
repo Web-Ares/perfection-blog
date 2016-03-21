@@ -5,14 +5,15 @@
 ?>
 <?php get_header('second'); ?>
 <?php
-$am = !empty($_GET['am'])?$_GET['am']:0;
+if(count($_GET)>=3){
+    $am = !empty($_GET['am'])?$_GET['am']:0;
 ?>
     <script type="text/javascript">
         window.dataLayer = window.dataLayer || [];
 
-        dataLayer.push({"event":"track-purchase-success", "productid":<?php echo $_GET['id']?>, "productname":"<?php echo $_GET['p']?>", "amount":"<?php echo $am?>"});
+        dataLayer.push({"event":"track-purchase-success", "productid":<?php echo $_GET['id']?>, "productname":"<?php echo $_GET['p']?>", "amount":<?php echo $am?>});
     </script>
-
+<?php }?>
     <!-- promo -->
     <div class="promo promo_thank-you">
 
