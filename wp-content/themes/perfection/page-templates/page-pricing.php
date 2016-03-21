@@ -22,7 +22,7 @@
                     <h1 class="promo__topic"><?php the_title(); ?></h1>
                     <!-- /promo__topic -->
 
-                    <p>The sharpest icons ever</p>
+                    <p>Get the sharpest icons ever!</p>
                 </div>
                 <!-- /promo__content -->
 
