@@ -142,6 +142,9 @@ function add_js_css()
         }else if(is_page_template('page-templates/page-download-thanks.php')){
             wp_enqueue_style('site_main');
             wp_enqueue_style('thank-you-css');
+        }else if(is_page_template('page-templates/page-pay-thanks.php')){
+            wp_enqueue_style('site_main');
+            wp_enqueue_style('thank-you-css');
         }else if(is_page_template('page-templates/page-legacy.php')){
             wp_enqueue_style('site_main');
             wp_enqueue_style('legal-css');

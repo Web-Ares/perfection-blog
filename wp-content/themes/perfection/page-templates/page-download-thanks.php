@@ -28,23 +28,24 @@
             </div>
             <!-- /promo__content -->
 
-            <!-- drop-menu__inner -->
-            <span class="copyright copyright_1">© ICON54 2016. All rights reserved</span>
-            <!-- drop-menu__inner -->
-
-            <!-- social -->
-            <div class="social social_1">
-                Follow us
-                <a href="https://dribbble.com/icon54" target="_blank" class="social__item social__item_btn"></a>
-                <a href="https://twitter.com/54_icon" target="_blank" class="social__item social__item_tw"></a>
-                <a href="https://www.facebook.com/Icon54-1762416167312152/?fref=ts" target="_blank" class="social__item social__item_fb"></a>
-            </div>
-            <!-- /social -->
-
-
         </div>
         <!-- /promo__wrap -->
 
     </div>
     <!-- /promo -->
+
+
+    <!-- drop-menu__inner -->
+    <span class="copyright copyright_1">© ICON54 2016. All rights reserved</span>
+    <!-- drop-menu__inner -->
+
+    <!-- social -->
+    <div class="social social_1">
+        Follow us
+        <a href="https://dribbble.com/icon54" target="_blank" class="social__item social__item_btn"></a>
+        <a href="https://twitter.com/54_icon" target="_blank" class="social__item social__item_tw"></a>
+        <a href="https://www.facebook.com/Icon54-1762416167312152/?fref=ts" target="_blank" class="social__item social__item_fb"></a>
+    </div>
+    <!-- /social -->
+
 <?php get_footer(); ?>
