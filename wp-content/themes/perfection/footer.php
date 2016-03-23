@@ -10,7 +10,7 @@
         <div class="site__footer-layout">
 
             <!-- logo_footer -->
-            <a href="<?php home_url(); ?>" class="logo_footer">
+            <a href="<?php echo home_url(); ?>" class="logo_footer">
                 <img src="<?php echo TEMPLATEURI ?>/img/logo_footer.png" alt="icon"/>
             </a>
             <!-- /logo_footer -->
