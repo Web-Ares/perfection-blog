@@ -11,6 +11,9 @@ $blog_info = get_bloginfo('template_url');
 define('BLOGINFO', $blog_info);
 remove_filter('template_redirect', 'redirect_canonical');
 
+
+
+
 show_admin_bar( false );
 // Load library files.
 require_once( TEMPLATEINC . '/shortcodes.php' );
