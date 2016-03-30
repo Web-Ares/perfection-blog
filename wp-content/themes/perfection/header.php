@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
+
+    <?php if(is_home()); { ?>
+
+        <meta name="google-site-verification" content="9AkI7qElT9KA7ZPQu0yHQH9kGcmcjZhCp_wB4Fx6WAk" />
+
+    <? }?>
+
     <link rel="icon" href="<?php echo TEMPLATEURI ?>/favicon.png" type="image/png">
     <title><?php document_title(); ?></title>
     <?php wp_head(); ?>
