@@ -1,7 +1,8 @@
 
-
 <?php if ( is_page_template('page-templates/page-contact-thanks.php')===false
-    && is_page_template('page-templates/page-download-thanks.php')===false && is_page_template('page-templates/page-pay-thanks.php')===false ){ ?>
+    && is_page_template('page-templates/page-download-thanks.php')===false
+    && is_page_template('page-templates/page-pay-thanks.php')===false
+    && is_page_template('page-templates/page-pricing.php')===false){ ?>
 
     <!-- site__footer -->
     <footer class="site__footer">
