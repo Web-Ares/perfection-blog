@@ -6,11 +6,11 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
 
-    <?php if( is_home()) { ?>
+    <?php if( is_front_page() ) { ?>
 
         <meta name="google-site-verification" content="9AkI7qElT9KA7ZPQu0yHQH9kGcmcjZhCp_wB4Fx6WAk" />
 
-    <? }?>
+    <?php } ?>
 
     <link rel="icon" href="<?php echo TEMPLATEURI ?>/favicon.png" type="image/png">
     <title><?php document_title(); ?></title>
