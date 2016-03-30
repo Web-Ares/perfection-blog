@@ -29,11 +29,12 @@ if(!empty($_GET['checkout_id'])) {
 
         dataLayer.push({
             "event":    "checkout",
-            "price":    '<?php echo $item_total; ?>,
+            "price":    '<?php echo $item_total; ?>',
             "quantity": '<?php echo $quantity; ?>',
             "currency": '<?php echo $currency_code; ?>',
             "id":       '<?php echo $checkout_id; ?>',
-            "revenue":  '<?php echo $order_total; ?>'
+            "revenue":  '<?php echo $order_total; ?>',
+            "name" :    '<?php echo $product_name; ?>'
         });
 
     </script>
