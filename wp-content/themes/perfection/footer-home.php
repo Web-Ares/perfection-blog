@@ -64,9 +64,35 @@
 
 <?php
 
-wp_enqueue_style('swiper-css', false, '2.1.3', true);
-
-
 wp_footer(); ?>
+
+<link rel="stylesheet" type="text/css" href='<?php echo TEMPLATEURI . '/style.min.css?ver=1.0' . '&amp;date=' . date
+    ('mdyi'); ?>'/>
+<link rel="stylesheet" type="text/css" href='<?php echo TEMPLATEURI . '/css/content2.min.css?ver=1.0' . '&amp;
+            date=' . date('mdyi'); ?>'/>
+<?php if (is_front_page()) { ?>
+    <link rel="stylesheet" type="text/css" href='<?php echo TEMPLATEURI . '/css/content1.min.css?ver=1.0' . '&amp;
+            date=' . date('mdyi'); ?>'/>
+<?php }; ?>
+<script>
+    var arrJs = [
+        '<?php echo TEMPLATEURI . '/js/jquery-2.1.3.min.js'.'?date='.date('mdyi');?>',
+        '<?php echo TEMPLATEURI . '/js/jquery.form.min.js'.'?date='.date('mdyi'); ?>',
+        '<?php echo TEMPLATEURI . '/js/scripts-form.js'.'?date='.date('mdyi'); ?>',
+        '<?php echo TEMPLATEURI . '/js/jquery.iscroll.js'.'?date='.date('mdyi'); ?>',
+        '<?php echo TEMPLATEURI . '/js/hammer.min.js'.'?date='.date('mdyi'); ?>',
+        '<?php echo TEMPLATEURI . '/js/jquery.liMarquee.js'.'?date='.date('mdyi'); ?>',
+        '<?php echo TEMPLATEURI . '/js/jquery.main.min.js'.'?date='.date('mdyi'); ?>'
+    ], countJs = arrJs.length, i = null, e = null;
+
+    window.onload = function () {
+        for (i = 0; i < countJs; i++) {
+            e = document.createElement("script");
+            e.async = false;
+            e.src = arrJs[i];
+            document.body.appendChild(e);
+        }
+    }
+</script>
 </body>
 </html>

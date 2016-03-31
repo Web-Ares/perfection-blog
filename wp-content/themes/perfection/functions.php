@@ -9,7 +9,6 @@ define( 'COUNT_CATEGORIES', get_field('count_categories', 'options') );
 
 $blog_info = get_bloginfo('template_url');
 define('BLOGINFO', $blog_info);
-remove_filter('template_redirect', 'redirect_canonical');
 
 
 
