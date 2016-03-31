@@ -187,3 +187,37 @@ function ssd_admin_clean_up(){
 //    remove_menu_page( 'edit.php?post_type=acf-field-group' );
 }
 add_action('admin_menu', 'ssd_admin_clean_up');
+
+add_action('wp_ajax_mchimp', 'mchimp');
+add_action('wp_ajax_nopriv_mchimp', 'mchimp');
+
+/**
+ *
+ */
+function mchimp()
+{
+    $email = $_POST['EMAIL'];
+
+    if(!email_check($email)){
+        die('{"result":"error"}');
+    }else{
+        require_once( TEMPLATEINC . '/MCAPI.class.php' );
+        $api = new MCAPI('75862ef22e3827c5baf7033a2bf62c81-us4');
+        $merge_vars = array('double_optin'=>false);
+        $retval = $api->listSubscribe( '9af64abdb1', $email, $merge_vars, 'html', false, true );
+        if ($api->errorCode){
+            die('{"result":"error"}');
+        } else {
+            die('{"result":"success"}');
+        }
+        die('{"result":"error"}');
+    }
+
+}
+
+function email_check($email)
+{
+    if (!preg_match("/^(?:[a-z0-9]+(?:[-_.]?[a-z0-9]+)?@[a-z0-9_.-]+(?:\.?[a-z0-9]+)?\.[a-z]{2,5})$/i", trim($email))) {
+        return false;
+    } else return true;
+}

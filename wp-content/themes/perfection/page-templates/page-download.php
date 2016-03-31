@@ -6,7 +6,7 @@
 
 <?php get_header('second'); ?>
     <!-- promo -->
-    <div class="promo promo_inner">
+    <div class="promo promo_inner" data-action="<?php echo admin_url('admin-ajax.php');?>">
 
         <!-- promo__wrap -->
         <div class="promo__wrap promo__wrap_inner">
