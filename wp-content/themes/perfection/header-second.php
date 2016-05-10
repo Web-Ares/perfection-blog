@@ -9,6 +9,9 @@
     <link rel="icon" href="<?php echo TEMPLATEURI ?>/favicon.png" type="image/png">
     <?php wp_head(); ?>
     <style>
+        body, html{
+            background-color: #111
+        }
         .preloader{
             position: fixed;
             top: 0;
@@ -17,7 +20,7 @@
             height: 100%;
             visibility: visible;
             opacity: 1;
-            background-color: #242a2f;
+            background-color: #111;
             transition: visibility .3s ease, opacity .3s ease;
             -webkit-transition: visibility .3s ease, opacity .3s ease;
             z-index: 4;
