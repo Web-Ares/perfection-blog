@@ -17,6 +17,7 @@ if(!empty($_GET['checkout_id'])) {
     $currency_code = (!empty($_GET['currency_code'])) ? $_GET['currency_code'] : 'USD';
     $product_name = (!empty($_GET['product_name'])) ? addslashes($_GET['product_name']) : 'Unknown Product';
 
+
     // If we have a checkout, let's track it!
     $track = true;
 } else {
@@ -36,6 +37,8 @@ if(!empty($_GET['checkout_id'])) {
             "revenue":  '<?php echo $order_total; ?>',
             "name" :    '<?php echo $product_name; ?>'
         });
+
+        adoric.trigger('Purchase', <?php echo $item_total; ?>);
 
     </script>
 
