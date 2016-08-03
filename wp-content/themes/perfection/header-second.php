@@ -45,6 +45,19 @@
     })(window,document,'script','dataLayer','GTM-W2BZ82');
 
 </script>
+
+<?php
+if(is_page_template('page-templates/page-pricing.php')){ ?>
+    <script type="text/javascript">
+        Paddle.Setup({
+            vendor: 13925,
+            debug: true
+        });
+    </script>
+<?php }
+
+?>
+
 <!-- End Google Tag Manager -->
 <!-- site -->
 <div class="site">

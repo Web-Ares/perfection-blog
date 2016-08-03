@@ -145,7 +145,8 @@ function add_js_css()
             wp_enqueue_style('site_main');
             wp_enqueue_style('legal-css');
         }else if(is_page_template('page-templates/page-pricing.php')){
-            wp_register_script('checkout', 'https://paddle.s3.amazonaws.com/checkout/checkout.js', false, '2.1.3', true);
+//            wp_register_script('checkout', 'https://paddle.s3.amazonaws.com/checkout/checkout.js', false, '2.1.3', true);
+            wp_register_script('checkout', 'https://cdn.paddle.com/paddle/paddle.js');
             wp_enqueue_style('site_main');
             wp_enqueue_style('pricing-css');
             wp_enqueue_script('checkout');
