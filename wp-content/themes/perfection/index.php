@@ -68,7 +68,6 @@ get_header('blog'); ?>
 </section>
 <!-- /site__content -->
 
-</div>
-<!-- /site -->
+
 
 <?php get_footer(); ?>
