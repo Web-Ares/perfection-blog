@@ -12,6 +12,7 @@
 
     <?php } ?>
 
+
     <link rel="icon" href="<?php echo TEMPLATEURI ?>/favicon.png" type="image/png">
     <title><?php document_title(); ?></title>
     <?php wp_head(); ?>
@@ -38,6 +39,9 @@
             opacity: 0;
         }
     </style>
+
+
+
 </head>
 
 
