@@ -80,6 +80,7 @@
         <div class="site__header-layout">
 
             <a href="<?php home_url(); ?>" class="logo">
+                <img src="<?php echo TEMPLATEURI ?>/img/logo-small-black1.png?<?php echo time(); ?>" alt="logo">
                 <img src="<?php echo TEMPLATEURI ?>/img/logo-small.png?<?php echo time(); ?>" alt="logo">
             </a>
             <!-- /logo -->

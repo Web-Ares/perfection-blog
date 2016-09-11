@@ -51,6 +51,15 @@ $(function () {
         new TopGif( $( window ) );
     } );
 
+    $('.promo .btn_1').on({
+        'mouseenter': function() {
+            $('.promo__arrow-bottom').addClass('visible');
+        },
+        'mouseleave': function() {
+            $('.promo__arrow-bottom').removeClass('visible');
+        }
+    })
+
 });
 
 var Developer = function (obj) {
@@ -432,8 +441,14 @@ var Preloader = function(obj) {
             setTimeout( function() {
                 _obg.addClass( 'preloader_hide' );
                 $('.promo__parenthesis').addClass('visible');
+                $('.header-menu__item').addClass('visible');
                 $('.site').css('background-color','#fff');
-            }, 100)
+            }, 100);
+
+            setTimeout( function() {
+                $('.logo__main img').addClass('visible');
+                $('.promo__logo').addClass('hide');
+            }, 5500)
         },
         _init = function() {
             _onEvents();

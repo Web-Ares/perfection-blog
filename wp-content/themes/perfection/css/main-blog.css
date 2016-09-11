@@ -858,7 +858,7 @@
         padding: 0 40px;
     }
     .site__footer {
-        z-index: 2;
+        z-index: 4;
         position: absolute;
         left: 0;
         right: 0;
