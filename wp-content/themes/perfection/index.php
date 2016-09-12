@@ -2,7 +2,7 @@
 
 get_header('blog'); ?>
 <!-- promo -->
-<div class="promo">
+<div class="promo promo_inner">
 
     <!-- promo__wrap -->
     <div class="promo__wrap">

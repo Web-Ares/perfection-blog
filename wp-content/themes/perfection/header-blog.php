@@ -57,13 +57,16 @@
     <!-- /preloader -->
 
     <!-- site__header -->
-    <header class="site__header">
+    <header class="site__header <?= (!is_singular('post'))? 'site__header_inner' : ''; ?>">
 
         <!-- site__header-layout -->
         <div class="site__header-layout">
 
             <!-- logo -->
             <a href="<?php echo home_url(); ?>" class="logo">
+                <?php if(!is_singular('post')): ?>
+                <img src="<?php echo TEMPLATEURI ?>/img/logo_inside-black.png" alt="logo">
+                <?php endif; ?>
                 <img src="<?php echo TEMPLATEURI ?>/img/logo_inside.png?<?php echo time();?>" alt="logo">
             </a>
             <!-- /logo -->
