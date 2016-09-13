@@ -10,7 +10,7 @@
     <?php wp_head(); ?>
     <style>
         body, html{
-            background-color: #111
+            background-color: #fff
         }
         .preloader{
             position: fixed;
@@ -20,7 +20,7 @@
             height: 100%;
             visibility: visible;
             opacity: 1;
-            background-color: #111;
+            background-color: #fff;
             transition: visibility .3s ease, opacity .3s ease;
             -webkit-transition: visibility .3s ease, opacity .3s ease;
             z-index: 4;
@@ -57,16 +57,17 @@
     <!-- /preloader -->
 
     <!-- site__header -->
-    <header class="site__header <?= (!is_singular('post'))? 'site__header_inner' : ''; ?>">
+    <header class="site__header <?= (!is_singular('post'))? 'site__header_inner' : 'site__header_blog-inner'; ?>">
 
         <!-- site__header-layout -->
         <div class="site__header-layout">
 
             <!-- logo -->
             <a href="<?php echo home_url(); ?>" class="logo">
-                <?php if(!is_singular('post')): ?>
-                <img src="<?php echo TEMPLATEURI ?>/img/logo_inside-black.png" alt="logo">
-                <?php endif; ?>
+
+                <img src="<?php echo TEMPLATEURI ?>/img/logo_inside-black.png?<?php echo time();?>" alt="logo">
+              
+                
                 <img src="<?php echo TEMPLATEURI ?>/img/logo_inside.png?<?php echo time();?>" alt="logo">
             </a>
             <!-- /logo -->

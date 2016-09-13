@@ -18,7 +18,7 @@
     <?php wp_head(); ?>
     <style>
         body, html{
-            background-color: #111
+            background-color: #fff
         }
         .preloader {
             position: fixed;
@@ -28,7 +28,7 @@
             height: 100%;
             visibility: visible;
             opacity: 1;
-            background-color: #111;
+            background-color: #fff;
             transition: visibility .3s ease, opacity .3s ease;
             -webkit-transition: visibility .3s ease, opacity .3s ease;
             z-index: 4;

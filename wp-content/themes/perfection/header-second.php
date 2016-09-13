@@ -10,7 +10,7 @@
     <?php wp_head(); ?>
     <style>
         body, html{
-            background-color: #111
+            background-color: #fff
         }
         .preloader{
             position: fixed;
@@ -20,7 +20,7 @@
             height: 100%;
             visibility: visible;
             opacity: 1;
-            background-color: #111;
+            background-color: #fff;
             transition: visibility .3s ease, opacity .3s ease;
             -webkit-transition: visibility .3s ease, opacity .3s ease;
             z-index: 4;
@@ -80,7 +80,7 @@
         <div class="site__header-layout">
             <!-- logo -->
             <a href="<?php echo home_url(); ?>" class="logo logo_inner">
-                <img src="<?php echo TEMPLATEURI ?>/img/logo_inside-black.png" alt="logo">
+                <img src="<?php echo TEMPLATEURI ?>/img/logo_inside-black.png?<?php echo time();?>" alt="logo">
                 <img src="<?php echo TEMPLATEURI ?>/img/logo_inside.png?<?php echo time();?>" alt="logo">
             </a>
             <!-- /logo -->
