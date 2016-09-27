@@ -340,7 +340,7 @@ function get_all_categories($field_name)
 }
 
 function get_downloadlink(){
-    echo do_shortcode('[download id="1"]');
+    echo do_shortcode('[download id="3"]');
 }
 
 function impressed_slides()
